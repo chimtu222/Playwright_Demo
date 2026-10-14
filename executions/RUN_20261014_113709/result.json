@@ -1,0 +1,675 @@
+{
+    "executionId": "RUN_20261014_113709",
+    "status": "Failed",
+    "environment": "Excel",
+    "browser": "chromium",
+    "startTime": "2026-10-14T11:37:09.194Z",
+    "endTime": "2026-10-14T11:37:40.836Z",
+    "duration": 31642,
+    "totalTestCases": 5,
+    "passedTestCases": 4,
+    "failedTestCases": 1,
+    "testCases": [
+        {
+            "testCaseId": "TC001",
+            "testCaseName": "Valid OrangeHRM Login",
+            "description": "Valid OrangeHRM Login",
+            "module": "Authentication",
+            "priority": "High",
+            "status": "Passed",
+            "startTime": "2026-10-14T11:37:12.003Z",
+            "endTime": "2026-10-14T11:37:23.724Z",
+            "duration": 11721,
+            "totalSteps": 12,
+            "passedSteps": 12,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:12.003Z",
+                    "endTime": "2026-10-14T11:37:15.642Z",
+                    "duration": 3639,
+                    "screenshot": "screenshots/TC001_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:15.642Z",
+                    "endTime": "2026-10-14T11:37:18.047Z",
+                    "duration": 2405,
+                    "screenshot": "screenshots/TC001_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:18.047Z",
+                    "endTime": "2026-10-14T11:37:18.156Z",
+                    "duration": 109,
+                    "screenshot": "screenshots/TC001_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:18.156Z",
+                    "endTime": "2026-10-14T11:37:18.284Z",
+                    "duration": 128,
+                    "screenshot": "screenshots/TC001_STEP004_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:18.285Z",
+                    "endTime": "2026-10-14T11:37:18.405Z",
+                    "duration": 120,
+                    "screenshot": "screenshots/TC001_STEP005_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:18.405Z",
+                    "endTime": "2026-10-14T11:37:20.075Z",
+                    "duration": 1670,
+                    "screenshot": "screenshots/TC001_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:20.075Z",
+                    "endTime": "2026-10-14T11:37:21.449Z",
+                    "duration": 1374,
+                    "screenshot": "screenshots/TC001_STEP007_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify application URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:21.449Z",
+                    "endTime": "2026-10-14T11:37:21.689Z",
+                    "duration": 240,
+                    "screenshot": "screenshots/TC001_STEP008_Verify_application_URL.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Verify user dropdown is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:21.689Z",
+                    "endTime": "2026-10-14T11:37:21.883Z",
+                    "duration": 194,
+                    "screenshot": "screenshots/TC001_STEP009_Verify_user_dropdown_is_visible.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Click user dropdown",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:21.883Z",
+                    "endTime": "2026-10-14T11:37:22.179Z",
+                    "duration": 296,
+                    "screenshot": "screenshots/TC001_STEP010_Click_user_dropdown.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Verify Logout option is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:22.179Z",
+                    "endTime": "2026-10-14T11:37:22.600Z",
+                    "duration": 421,
+                    "screenshot": "screenshots/TC001_STEP011_Verify_Logout_option_is_visible.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:22.601Z",
+                    "endTime": "2026-10-14T11:37:23.724Z",
+                    "duration": 1123,
+                    "screenshot": "screenshots/TC001_STEP012_Click_Logout.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC002",
+            "testCaseName": "Invalid OrangeHRM Password",
+            "description": "Invalid OrangeHRM Password",
+            "module": "Authentication",
+            "priority": "High",
+            "status": "Passed",
+            "startTime": "2026-10-14T11:37:12.964Z",
+            "endTime": "2026-10-14T11:37:25.260Z",
+            "duration": 12296,
+            "totalSteps": 12,
+            "passedSteps": 12,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:12.964Z",
+                    "endTime": "2026-10-14T11:37:16.624Z",
+                    "duration": 3660,
+                    "screenshot": "screenshots/TC002_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:16.624Z",
+                    "endTime": "2026-10-14T11:37:19.325Z",
+                    "duration": 2701,
+                    "screenshot": "screenshots/TC002_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.325Z",
+                    "endTime": "2026-10-14T11:37:19.440Z",
+                    "duration": 115,
+                    "screenshot": "screenshots/TC002_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.440Z",
+                    "endTime": "2026-10-14T11:37:19.588Z",
+                    "duration": 148,
+                    "screenshot": "screenshots/TC002_STEP004_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill invalid password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.588Z",
+                    "endTime": "2026-10-14T11:37:19.796Z",
+                    "duration": 208,
+                    "screenshot": "screenshots/TC002_STEP005_Fill_invalid_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.796Z",
+                    "endTime": "2026-10-14T11:37:21.318Z",
+                    "duration": 1522,
+                    "screenshot": "screenshots/TC002_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify invalid credentials message",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:21.319Z",
+                    "endTime": "2026-10-14T11:37:22.585Z",
+                    "duration": 1266,
+                    "screenshot": "screenshots/TC002_STEP007_Verify_invalid_credentials_message.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify login URL remains displayed",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:22.585Z",
+                    "endTime": "2026-10-14T11:37:22.933Z",
+                    "duration": 348,
+                    "screenshot": "screenshots/TC002_STEP008_Verify_login_URL_remains_displayed.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Verify username field remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:22.933Z",
+                    "endTime": "2026-10-14T11:37:23.199Z",
+                    "duration": 266,
+                    "screenshot": "screenshots/TC002_STEP009_Verify_username_field_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Refill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.199Z",
+                    "endTime": "2026-10-14T11:37:23.339Z",
+                    "duration": 140,
+                    "screenshot": "screenshots/TC002_STEP010_Refill_username.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Fill second invalid password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.340Z",
+                    "endTime": "2026-10-14T11:37:23.622Z",
+                    "duration": 282,
+                    "screenshot": "screenshots/TC002_STEP011_Fill_second_invalid_password.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Click Login button again",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.622Z",
+                    "endTime": "2026-10-14T11:37:25.260Z",
+                    "duration": 1638,
+                    "screenshot": "screenshots/TC002_STEP012_Click_Login_button_again.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC003",
+            "testCaseName": "User Log out validation",
+            "description": "User Log out validation",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Passed",
+            "startTime": "2026-10-14T11:37:13.913Z",
+            "endTime": "2026-10-14T11:37:27.680Z",
+            "duration": 13767,
+            "totalSteps": 13,
+            "passedSteps": 13,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:13.913Z",
+                    "endTime": "2026-10-14T11:37:17.382Z",
+                    "duration": 3469,
+                    "screenshot": "screenshots/TC003_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:17.382Z",
+                    "endTime": "2026-10-14T11:37:19.583Z",
+                    "duration": 2201,
+                    "screenshot": "screenshots/TC003_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.584Z",
+                    "endTime": "2026-10-14T11:37:19.792Z",
+                    "duration": 208,
+                    "screenshot": "screenshots/TC003_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Type username Admin",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.792Z",
+                    "endTime": "2026-10-14T11:37:20.031Z",
+                    "duration": 239,
+                    "screenshot": "screenshots/TC003_STEP004_Type_username_Admin.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:20.031Z",
+                    "endTime": "2026-10-14T11:37:20.231Z",
+                    "duration": 200,
+                    "screenshot": "screenshots/TC003_STEP005_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:20.231Z",
+                    "endTime": "2026-10-14T11:37:22.676Z",
+                    "duration": 2445,
+                    "screenshot": "screenshots/TC003_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify login URL remains displayed",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:22.677Z",
+                    "endTime": "2026-10-14T11:37:23.194Z",
+                    "duration": 517,
+                    "screenshot": "screenshots/TC003_STEP007_Verify_login_URL_remains_displayed.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Click on profile name",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.194Z",
+                    "endTime": "2026-10-14T11:37:24.271Z",
+                    "duration": 1077,
+                    "screenshot": "screenshots/TC003_STEP008_Click_on_profile_name.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Click on Log out",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:24.271Z",
+                    "endTime": "2026-10-14T11:37:25.457Z",
+                    "duration": 1186,
+                    "screenshot": "screenshots/TC003_STEP009_Click_on_Log_out.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Verify username field remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:25.457Z",
+                    "endTime": "2026-10-14T11:37:25.865Z",
+                    "duration": 408,
+                    "screenshot": "screenshots/TC003_STEP010_Verify_username_field_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Fill username for retry",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:25.865Z",
+                    "endTime": "2026-10-14T11:37:25.965Z",
+                    "duration": 100,
+                    "screenshot": "screenshots/TC003_STEP011_Fill_username_for_retry.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Fill administrator password again",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:25.965Z",
+                    "endTime": "2026-10-14T11:37:26.087Z",
+                    "duration": 122,
+                    "screenshot": "screenshots/TC003_STEP012_Fill_administrator_password_again.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Click Login for successful retry",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:26.087Z",
+                    "endTime": "2026-10-14T11:37:27.680Z",
+                    "duration": 1593,
+                    "screenshot": "screenshots/TC003_STEP013_Click_Login_for_successful_retry.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC004",
+            "testCaseName": "Blank Username Validation",
+            "description": "Blank Username Validation",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Failed",
+            "startTime": "2026-10-14T11:37:14.972Z",
+            "endTime": "2026-10-14T11:37:38.150Z",
+            "duration": 23178,
+            "totalSteps": 5,
+            "passedSteps": 4,
+            "failedSteps": 1,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:14.972Z",
+                    "endTime": "2026-10-14T11:37:19.330Z",
+                    "duration": 4358,
+                    "screenshot": "screenshots/TC004_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Enter administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:19.330Z",
+                    "endTime": "2026-10-14T11:37:20.972Z",
+                    "duration": 1642,
+                    "screenshot": "screenshots/TC004_STEP002_Enter_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Enter administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:20.972Z",
+                    "endTime": "2026-10-14T11:37:21.119Z",
+                    "duration": 147,
+                    "screenshot": "screenshots/TC004_STEP003_Enter_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:21.119Z",
+                    "endTime": "2026-10-14T11:37:22.990Z",
+                    "duration": 1871,
+                    "screenshot": "screenshots/TC004_STEP004_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Failed",
+                    "startTime": "2026-10-14T11:37:22.990Z",
+                    "endTime": "2026-10-14T11:37:38.001Z",
+                    "duration": 15011,
+                    "screenshot": "screenshots/TC004_STEP005_Verify_Dashboard_FAILED.png",
+                    "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h6[normalize-space()=\"Dashboard\"]')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//h6[normalize-space()=\"Dashboard\"]') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h6[normalize-space()=\"Dashboard\"]')\u001b[22m\n"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC005",
+            "testCaseName": "User Delete Operation testing",
+            "description": "User Delete Operation testing",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Passed",
+            "startTime": "2026-10-14T11:37:16.199Z",
+            "endTime": "2026-10-14T11:37:40.825Z",
+            "duration": 24626,
+            "totalSteps": 16,
+            "passedSteps": 16,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:16.199Z",
+                    "endTime": "2026-10-14T11:37:20.726Z",
+                    "duration": 4527,
+                    "screenshot": "screenshots/TC005_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:20.726Z",
+                    "endTime": "2026-10-14T11:37:23.616Z",
+                    "duration": 2890,
+                    "screenshot": "screenshots/TC005_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.616Z",
+                    "endTime": "2026-10-14T11:37:23.906Z",
+                    "duration": 290,
+                    "screenshot": "screenshots/TC005_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:23.907Z",
+                    "endTime": "2026-10-14T11:37:24.264Z",
+                    "duration": 357,
+                    "screenshot": "screenshots/TC005_STEP004_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:24.264Z",
+                    "endTime": "2026-10-14T11:37:24.451Z",
+                    "duration": 187,
+                    "screenshot": "screenshots/TC005_STEP005_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:24.451Z",
+                    "endTime": "2026-10-14T11:37:26.121Z",
+                    "duration": 1670,
+                    "screenshot": "screenshots/TC005_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:26.121Z",
+                    "endTime": "2026-10-14T11:37:27.631Z",
+                    "duration": 1510,
+                    "screenshot": "screenshots/TC005_STEP007_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify 'Time at Work' is visible",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:27.631Z",
+                    "endTime": "2026-10-14T11:37:27.866Z",
+                    "duration": 235,
+                    "screenshot": "screenshots/TC005_STEP008_Verify_Time_at_Work_is_visible.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Verify application URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:27.866Z",
+                    "endTime": "2026-10-14T11:37:28.049Z",
+                    "duration": 183,
+                    "screenshot": "screenshots/TC005_STEP009_Verify_application_URL.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "click on PIM",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:28.049Z",
+                    "endTime": "2026-10-14T11:37:28.887Z",
+                    "duration": 838,
+                    "screenshot": "screenshots/TC005_STEP010_click_on_PIM.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Click on delete button for the first emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:28.887Z",
+                    "endTime": "2026-10-14T11:37:30.605Z",
+                    "duration": 1718,
+                    "screenshot": "screenshots/TC005_STEP011_Click_on_delete_button_for_the_first_emp.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:30.605Z",
+                    "endTime": "2026-10-14T11:37:30.788Z",
+                    "duration": 183,
+                    "screenshot": "screenshots/TC005_STEP012_Click_on_yes_delete_button.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Click on delete button for the second emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:30.788Z",
+                    "endTime": "2026-10-14T11:37:35.684Z",
+                    "duration": 4896,
+                    "screenshot": "screenshots/TC005_STEP013_Click_on_delete_button_for_the_second_emp.png"
+                },
+                {
+                    "stepId": "STEP014",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:35.684Z",
+                    "endTime": "2026-10-14T11:37:36.053Z",
+                    "duration": 369,
+                    "screenshot": "screenshots/TC005_STEP014_Click_on_yes_delete_button.png"
+                },
+                {
+                    "stepId": "STEP015",
+                    "stepName": "Click on delete button for the third emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:36.055Z",
+                    "endTime": "2026-10-14T11:37:40.640Z",
+                    "duration": 4585,
+                    "screenshot": "screenshots/TC005_STEP015_Click_on_delete_button_for_the_third_emp.png"
+                },
+                {
+                    "stepId": "STEP016",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-10-14T11:37:40.640Z",
+                    "endTime": "2026-10-14T11:37:40.825Z",
+                    "duration": 185,
+                    "screenshot": "screenshots/TC005_STEP016_Click_on_yes_delete_button.png"
+                }
+            ]
+        }
+    ]
+}
