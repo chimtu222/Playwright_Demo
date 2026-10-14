@@ -1,0 +1,9 @@
+{
+  "id": "orangehrm-demo",
+  "name": "OrangeHRM Demo",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/",
+  "defaultBrowser": "chromium",
+  "headless": false,
+  "defaultTimeout": 15000,
+  "navigationTimeout": 60000
+}
