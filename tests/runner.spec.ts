@@ -1,10 +1,10 @@
-import {test,expect} from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { TestRunner } from '../engine/TestRunner';
 import { StepExecutor } from '../engine/StepExecutor';
 import { RunContext } from '../engine/runtime/RunContext';
 import { ResultWriter } from '../engine/results/ResultWriter';
 import { HtmlReportGenerator } from '../engine/reports/HtmlReportGenerator';
-const MAX_PARALLEL_TESTCASES = 5;
+const MAX_PARALLEL_TESTCASES = 4;
 
 import {
     ExecutionResult,
@@ -73,217 +73,253 @@ async function runWithConcurrency<TInput, TResult>(
 test(
     'Run enabled codeless testcases',
     async ({
-    browser,
-    browserName
-}) => {
+        browser,
+        browserName
+    }) => {
 
         test.setTimeout(900000);
 
-        const runContext =RunContext.create();
-        const executionStart =new Date();
-        const testCases =await TestRunner.loadAllTestCases();
-        console.log(
-    `Found ${testCases.length} enabled test case(s).`
-);
+        const runContext = RunContext.create();
+        const executionStart = new Date();
+        const excelLoadStart =
+            performance.now();
 
-console.log(
-    `Running with maximum ${MAX_PARALLEL_TESTCASES} parallel testcase(s).`
-);
+        const testCases =
+            await TestRunner.loadAllTestCases();
 
-const testCaseResults =
-    await runWithConcurrency(
-        testCases,
-        MAX_PARALLEL_TESTCASES,
-        async tc => {
+        const excelLoadEnd =
+            performance.now();
 
-            console.log('');
-            console.log('===================================');
-            console.log(
-                `Starting ${tc.id}: ${tc.name}`
+        const totalLoadedSteps =
+            testCases.reduce(
+                (total, testCase) =>
+                    total + testCase.steps.length,
+                0
             );
-            console.log('===================================');
 
-            /*
-             * Each testcase receives a fresh page.
-             * This prevents one testcase from affecting another.
-             */
-           const testContext = await browser.newContext();
-           const page = await testContext.newPage();
+        const excelLoadDuration =
+            excelLoadEnd - excelLoadStart;
 
-            const testCaseStart =
-                new Date();
+        console.log('');
+        console.log('===================================');
+        console.log('Excel to Object Loading Summary');
+        console.log('===================================');
+        console.log(
+            `Testcases loaded : ${testCases.length}`
+        );
+        console.log(
+            `Steps loaded     : ${totalLoadedSteps}`
+        );
+        console.log(
+            `Loading time     : ${excelLoadDuration.toFixed(2)} ms`
+        );
+        console.log(
+            `Loading time     : ${(excelLoadDuration / 1000).toFixed(3)} sec`
+        );
+        console.log('===================================');
+        console.log('');
+        console.log(
+            `Found ${testCases.length} enabled test case(s).`
+        );
 
-            const stepResults:
-                StepResult[] = [];
+        console.log(
+            `Running with maximum ${MAX_PARALLEL_TESTCASES} parallel testcase(s).`
+        );
 
-            let testCaseStatus:
-                'Passed' | 'Failed' =
-                'Passed';
+        const testCaseResults =
+            await runWithConcurrency(
+                testCases,
+                MAX_PARALLEL_TESTCASES,
+                async tc => {
 
-            try {
-
-                for (const originalStep of tc.steps) {
+                    console.log('');
+                    console.log('===================================');
+                    console.log(
+                        `Starting ${tc.id}: ${tc.name}`
+                    );
+                    console.log('===================================');
 
                     /*
-                     * Create a copy so that resolving variables
-                     * does not modify the original JSON object.
+                     * Each testcase receives a fresh page.
+                     * This prevents one testcase from affecting another.
                      */
-                    const step = {
-                        ...originalStep,
-                        locator:
-                            originalStep.locator
-                                ? {
-                                    ...originalStep.locator
-                                }
-                                : undefined
-                    };
+                    const testContext = await browser.newContext();
+                    const page = await testContext.newPage();
 
-                    const stepStart =
+                    const testCaseStart =
                         new Date();
 
-                    console.log(
-                        `Executing: ${tc.id} - ${step.name}`
-                    );
+                    const stepResults:
+                        StepResult[] = [];
+
+                    let testCaseStatus:
+                        'Passed' | 'Failed' =
+                        'Passed';
 
                     try {
-                        const output =
-                            await StepExecutor.executeStep(
-                                page,
-                                step,
-                                tc.id,
-                                runContext.screenshotsDirectory
+
+                        for (const originalStep of tc.steps) {
+
+                            /*
+                             * Create a copy so that resolving variables
+                             * does not modify the original JSON object.
+                             */
+                            const step = {
+                                ...originalStep,
+                                locator:
+                                    originalStep.locator
+                                        ? {
+                                            ...originalStep.locator
+                                        }
+                                        : undefined
+                            };
+
+                            const stepStart =
+                                new Date();
+
+                            console.log(
+                                `Executing: ${tc.id} - ${step.name}`
                             );
 
-                        const stepEnd =
-                            new Date();
+                            try {
+                                const output =
+                                    await StepExecutor.executeStep(
+                                        page,
+                                        step,
+                                        tc.id,
+                                        runContext.screenshotsDirectory
+                                    );
 
-                        stepResults.push({
-                            stepId: step.id,
-                            stepName: step.name,
-                            action: step.action,
-                            status: 'Passed',
-                            startTime:
-                                stepStart.toISOString(),
-                            endTime:
-                                stepEnd.toISOString(),
-                            duration:
-                                stepEnd.getTime() -
-                                stepStart.getTime(),
-                            screenshot:
-                                output.screenshot
-                        });
+                                const stepEnd =
+                                    new Date();
 
-                        console.log(
-                            `Passed: ${tc.id} - ${step.name}`
-                        );
-                    }
-                    catch (error: any) {
-                        
-                        testCaseStatus =
-                            'Failed';
+                                stepResults.push({
+                                    stepId: step.id,
+                                    stepName: step.name,
+                                    action: step.action,
+                                    status: 'Passed',
+                                    startTime:
+                                        stepStart.toISOString(),
+                                    endTime:
+                                        stepEnd.toISOString(),
+                                    duration:
+                                        stepEnd.getTime() -
+                                        stepStart.getTime(),
+                                    screenshot:
+                                        output.screenshot
+                                });
 
-                        const stepEnd =
-                            new Date();
-                        let failureScreenshot: string | undefined;
+                                console.log(
+                                    `Passed: ${tc.id} - ${step.name}`
+                                );
+                            }
+                            catch (error: any) {
 
-                        try {
+                                testCaseStatus =
+                                    'Failed';
 
-                            const safeStepName =
-                                step.name.replace(
-                                    /[^a-zA-Z0-9_-]/g,
-                                    '_'
+                                const stepEnd =
+                                    new Date();
+                                let failureScreenshot: string | undefined;
+
+                                try {
+
+                                    const safeStepName =
+                                        step.name.replace(
+                                            /[^a-zA-Z0-9_-]/g,
+                                            '_'
+                                        );
+
+                                    const screenshotPath =
+                                        `${runContext.screenshotsDirectory}/${tc.id}_${step.id}_${safeStepName}_FAILED.png`;
+
+                                    await page.screenshot({
+                                        path: screenshotPath,
+                                        fullPage: true,
+                                        timeout: 10000
+                                    });
+
+                                    failureScreenshot =
+                                        `screenshots/${tc.id}_${step.id}_${safeStepName}_FAILED.png`;
+                                }
+                                catch {
+
+                                    console.error(
+                                        `Could not capture failure screenshot for ${tc.id} - ${step.id}`
+                                    );
+                                }
+                                stepResults.push({
+                                    stepId: step.id,
+                                    stepName: step.name,
+                                    action: step.action,
+                                    status: 'Failed',
+                                    startTime: stepStart.toISOString(),
+                                    endTime: stepEnd.toISOString(),
+                                    duration:
+                                        stepEnd.getTime() -
+                                        stepStart.getTime(),
+                                    screenshot: failureScreenshot,
+                                    error:
+                                        error?.message ??
+                                        String(error)
+                                });
+
+                                console.error(
+                                    `Failed: ${tc.id} - ${step.name}`
                                 );
 
-                            const screenshotPath =
-                                `${runContext.screenshotsDirectory}/${tc.id}_${step.id}_${safeStepName}_FAILED.png`;
 
-                            await page.screenshot({
-                                path: screenshotPath,
-                                fullPage: true,
-                                timeout: 10000
-                            });
-
-                            failureScreenshot =
-                                `screenshots/${tc.id}_${step.id}_${safeStepName}_FAILED.png`;
+                                /*
+                                 * Stop only the current testcase.
+                                 * The next testcase will still run.
+                                 */
+                                break;
+                            }
                         }
-                        catch {
+                    }
+                    finally {
 
-                            console.error(
-                                `Could not capture failure screenshot for ${tc.id} - ${step.id}`
-                            );
-                        }
-                        stepResults.push({
-                        stepId: step.id,
-                        stepName: step.name,
-                        action: step.action,
-                        status: 'Failed',
-                        startTime: stepStart.toISOString(),
-                        endTime: stepEnd.toISOString(),
-                        duration:
-                            stepEnd.getTime() -
-                            stepStart.getTime(),
-                        screenshot: failureScreenshot,
-                        error:
-                            error?.message ??
-                            String(error)
-                    });
+                        const testCaseEnd =
+                            new Date();
 
-                        console.error(
-                            `Failed: ${tc.id} - ${step.name}`
+                        const passedSteps =
+                            stepResults.filter(
+                                step =>
+                                    step.status === 'Passed'
+                            ).length;
+
+                        const failedSteps =
+                            stepResults.filter(
+                                step =>
+                                    step.status === 'Failed'
+                            ).length;
+
+                        const testCaseResult:
+                            TestCaseResult = {
+                            testCaseId: tc.id,
+                            testCaseName: tc.name,
+                            description: tc.description,
+                            module: tc.module,
+                            priority: tc.priority,
+                            status: testCaseStatus,
+                            startTime: testCaseStart.toISOString(),
+                            endTime: testCaseEnd.toISOString(),
+                            duration: testCaseEnd.getTime() - testCaseStart.getTime(),
+                            totalSteps: tc.steps.length,
+                            passedSteps,
+                            failedSteps,
+                            steps: stepResults
+                        };
+
+                        await testContext.close();
+
+                        console.log(
+                            `${tc.id} completed with status: ${testCaseStatus}`
                         );
-                        
-
-                        /*
-                         * Stop only the current testcase.
-                         * The next testcase will still run.
-                         */
-                        break;
+                        return testCaseResult;
                     }
                 }
-            }
-            finally {
-
-                const testCaseEnd =
-                    new Date();
-
-                const passedSteps =
-                    stepResults.filter(
-                        step =>
-                            step.status === 'Passed'
-                    ).length;
-
-                const failedSteps =
-                    stepResults.filter(
-                        step =>
-                            step.status === 'Failed'
-                    ).length;
-
-              const testCaseResult:
-                    TestCaseResult = {
-                    testCaseId: tc.id,
-                    testCaseName:tc.name,
-                    description:tc.description,
-                    module:tc.module,
-                    priority:tc.priority,
-                    status:testCaseStatus,
-                    startTime:testCaseStart.toISOString(),
-                    endTime:testCaseEnd.toISOString(),
-                    duration:testCaseEnd.getTime() -testCaseStart.getTime(),
-                    totalSteps: tc.steps.length,
-                    passedSteps,
-                    failedSteps,
-                    steps:stepResults
-                };
-
-                await testContext.close();
-
-                console.log(
-                    `${tc.id} completed with status: ${testCaseStatus}`
-                );
-                return testCaseResult;
-            }
-        }        
-    );
+            );
 
         const executionEnd =
             new Date();
@@ -370,7 +406,7 @@ const testCaseResults =
         );
         console.log('===================================');
 
-        
+
         if (failedTestCases > 0) {
             console.warn(
                 `Execution completed with ${failedTestCases} failed codeless testcase(s).`

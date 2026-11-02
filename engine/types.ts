@@ -19,6 +19,7 @@ export type ActionType =
 
 export type LocatorType =
     | 'role'
+    | 'id'
     | 'text'
     | 'label'
     | 'placeholder'

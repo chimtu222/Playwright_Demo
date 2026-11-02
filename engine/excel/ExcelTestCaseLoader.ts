@@ -5,6 +5,7 @@ import * as ExcelJS from 'exceljs';
 import {
     ActionType,
     CodelessTestCase,
+    LocatorType,
     TestStep
 } from '../types';
 
@@ -13,12 +14,22 @@ interface TestCaseControlRow {
     testCaseName: string;
     runStatus: string;
     module: string;
-    priority?: 'Low' | 'Medium' | 'High' | 'Critical';
+
+    priority?:
+        | 'Low'
+        | 'Medium'
+        | 'High'
+        | 'Critical';
 }
 
 export class ExcelTestCaseLoader {
 
-    private static readonly workbookPath =path.join(process.cwd(),'testdata','PlaywrightTestData.xlsx');
+    private static readonly workbookPath =
+        path.join(
+            process.cwd(),
+            'testdata',
+            'PlaywrightTestData.xlsx'
+        );
 
     static async loadEnabledTestCases():
         Promise<CodelessTestCase[]> {
@@ -36,8 +47,27 @@ export class ExcelTestCaseLoader {
         const workbook =
             new ExcelJS.Workbook();
 
+        // await workbook.xlsx.readFile(
+        //     this.workbookPath
+        // );
         await workbook.xlsx.readFile(
-            this.workbookPath
+            this.workbookPath,
+            {
+                ignoreNodes: [
+                    'dataValidations',
+                    'conditionalFormatting',
+                    'hyperlinks',
+                    'pageMargins',
+                    'pageSetup',
+                    'headerFooter',
+                    'printOptions',
+                    'drawing',
+                    'picture',
+                    'tableParts',
+                    'autoFilter',
+                    'mergeCells'
+                ]
+            }
         );
 
         const controlSheet =
@@ -56,13 +86,55 @@ export class ExcelTestCaseLoader {
                 controlSheet
             );
 
+        /*
+         * This map is used for validating reusable
+         * testcase references such as TC001.
+         */
+        const controlMap =
+            new Map<
+                string,
+                TestCaseControlRow
+            >();
+
+        for (
+            const controlRow
+            of controlRows
+        ) {
+            const normalizedId =
+                controlRow.testCaseId
+                    .trim()
+                    .toUpperCase();
+
+            if (
+                controlMap.has(
+                    normalizedId
+                )
+            ) {
+                throw new Error(
+                    `Duplicate TCID "${controlRow.testCaseId}" ` +
+                    `was found in the TestCases sheet.`
+                );
+            }
+
+            controlMap.set(
+                normalizedId,
+                controlRow
+            );
+        }
+
+        /*
+         * Top-level execution is controlled from
+         * the TestCases sheet.
+         */
         const enabledRows =
             controlRows.filter(
                 row =>
                     row.runStatus === 'Y'
             );
 
-        if (enabledRows.length === 0) {
+        if (
+            enabledRows.length === 0
+        ) {
             throw new Error(
                 'No testcases have Run Status = Y in the TestCases sheet.'
             );
@@ -75,27 +147,44 @@ export class ExcelTestCaseLoader {
             const controlRow
             of enabledRows
         ) {
+            const testCaseId =
+                controlRow.testCaseId
+                    .trim()
+                    .toUpperCase();
+
             const testCaseSheet =
-                workbook.getWorksheet(
-                    controlRow.testCaseId
+                this.getWorksheetByName(
+                    workbook,
+                    testCaseId
                 );
 
             if (!testCaseSheet) {
                 throw new Error(
-                    `Worksheet "${controlRow.testCaseId}" was not found ` +
+                    `Worksheet "${testCaseId}" was not found ` +
                     `for testcase "${controlRow.testCaseName}".`
                 );
             }
 
             const steps =
                 this.readTestSteps(
+                    workbook,
+                    controlMap,
                     testCaseSheet,
-                    controlRow.testCaseId
+                    testCaseId,
+                    []
                 );
+
+            if (
+                steps.length === 0
+            ) {
+                throw new Error(
+                    `No enabled steps were found in worksheet "${testCaseId}".`
+                );
+            }
 
             testCases.push({
                 id:
-                    controlRow.testCaseId,
+                    testCaseId,
 
                 name:
                     controlRow.testCaseName,
@@ -148,7 +237,9 @@ export class ExcelTestCaseLoader {
             const testCaseId =
                 this.getCellText(
                     row.getCell(1)
-                );
+                )
+                    .trim()
+                    .toUpperCase();
 
             const testCaseName =
                 this.getCellText(
@@ -158,7 +249,9 @@ export class ExcelTestCaseLoader {
             const runStatus =
                 this.getCellText(
                     row.getCell(3)
-                ).toUpperCase();
+                )
+                    .trim()
+                    .toUpperCase();
 
             const module =
                 this.getCellText(
@@ -170,13 +263,14 @@ export class ExcelTestCaseLoader {
                     row.getCell(5)
                 );
 
-            if (
+            const isBlankRow =
                 !testCaseId &&
                 !testCaseName &&
                 !runStatus &&
                 !module &&
-                !priorityText
-            ) {
+                !priorityText;
+
+            if (isBlankRow) {
                 continue;
             }
 
@@ -227,6 +321,7 @@ export class ExcelTestCaseLoader {
                 testCaseName,
                 runStatus,
                 module,
+
                 priority:
                     priorityText
                         ? priorityText as
@@ -242,9 +337,45 @@ export class ExcelTestCaseLoader {
     }
 
     private static readTestSteps(
+        workbook: ExcelJS.Workbook,
+        controlMap: Map<
+            string,
+            TestCaseControlRow
+        >,
         worksheet: ExcelJS.Worksheet,
-        testCaseId: string
+        testCaseId: string,
+        callStack: string[]
     ): TestStep[] {
+
+        const normalizedTestCaseId =
+            testCaseId
+                .trim()
+                .toUpperCase();
+
+        /*
+         * Prevent circular calls:
+         *
+         * TC001 -> TC003 -> TC001
+         */
+        if (
+            callStack.includes(
+                normalizedTestCaseId
+            )
+        ) {
+            const circularChain = [
+                ...callStack,
+                normalizedTestCaseId
+            ].join(' -> ');
+
+            throw new Error(
+                `Circular testcase reference detected: ${circularChain}`
+            );
+        }
+
+        const currentCallStack = [
+            ...callStack,
+            normalizedTestCaseId
+        ];
 
         const steps:
             TestStep[] = [];
@@ -259,6 +390,19 @@ export class ExcelTestCaseLoader {
                     rowNumber
                 );
 
+            /*
+             * Excel column structure:
+             *
+             * 1 = Step No.
+             * 2 = Step Name
+             * 3 = Action
+             * 4 = Locator Type
+             * 5 = Locator Value
+             * 6 = URL
+             * 7 = Value
+             * 8 = Run Status / Referenced TCID
+             */
+
             const stepName =
                 this.getCellText(
                     row.getCell(2)
@@ -269,121 +413,307 @@ export class ExcelTestCaseLoader {
                     row.getCell(3)
                 );
 
-            const xpath =
+            const locatorType =
                 this.getCellText(
                     row.getCell(4)
                 );
 
-            const url =
+            const locatorValue =
                 this.getCellText(
                     row.getCell(5)
                 );
 
-            const value =
+            const url =
                 this.getCellText(
                     row.getCell(6)
                 );
 
-            if (
+            const value =
+                this.getCellText(
+                    row.getCell(7)
+                );
+
+            const runDirective =
+                this.getCellText(
+                    row.getCell(8)
+                )
+                    .trim()
+                    .toUpperCase();
+
+            /*
+             * Step No. is intentionally ignored.
+             *
+             * The first row where all actual execution
+             * columns are blank marks the end of the testcase.
+             */
+            const isCompletelyBlankRow =
                 !stepName &&
                 !excelAction &&
-                !xpath &&
+                !locatorType &&
+                !locatorValue &&
                 !url &&
-                !value
+                !value &&
+                !runDirective;
+
+            if (
+                isCompletelyBlankRow
+            ) {
+                break;
+            }
+
+            if (!runDirective) {
+                throw new Error(
+                    `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                    `Run Status is required. Use Y, N, or a valid TCID.`
+                );
+            }
+
+            /*
+             * N means skip the row.
+             */
+            if (
+                runDirective === 'N'
             ) {
                 continue;
             }
 
+            /*
+             * A value other than Y or N is treated
+             * as a reusable testcase reference.
+             */
+            if (
+                runDirective !== 'Y'
+            ) {
+                const referencedTestCaseId =
+                    runDirective;
+
+                if (
+                    excelAction ||
+                    locatorType ||
+                    locatorValue ||
+                    url ||
+                    value
+                ) {
+                    throw new Error(
+                        `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                        `Referenced testcase row "${referencedTestCaseId}" ` +
+                        `must not contain Action, Locator Type, ` +
+                        `Locator Value, URL, or Value.`
+                    );
+                }
+
+                if (!stepName) {
+                    throw new Error(
+                        `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                        `Step Name is required for testcase reference ` +
+                        `"${referencedTestCaseId}".`
+                    );
+                }
+
+                if (
+                    !controlMap.has(
+                        referencedTestCaseId
+                    )
+                ) {
+                    throw new Error(
+                        `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                        `Referenced testcase "${referencedTestCaseId}" ` +
+                        `was not found in the TestCases sheet.`
+                    );
+                }
+
+                const referencedSheet =
+                    this.getWorksheetByName(
+                        workbook,
+                        referencedTestCaseId
+                    );
+
+                if (!referencedSheet) {
+                    throw new Error(
+                        `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                        `Worksheet "${referencedTestCaseId}" was not found.`
+                    );
+                }
+
+                const referencedSteps =
+                    this.readTestSteps(
+                        workbook,
+                        controlMap,
+                        referencedSheet,
+                        referencedTestCaseId,
+                        currentCallStack
+                    );
+
+                if (
+                    referencedSteps.length === 0
+                ) {
+                    throw new Error(
+                        `${normalizedTestCaseId}, Excel row ${rowNumber}: ` +
+                        `Referenced testcase "${referencedTestCaseId}" ` +
+                        `does not contain any enabled steps.`
+                    );
+                }
+
+                /*
+                 * Insert the referenced testcase steps
+                 * into the parent testcase sequence.
+                 */
+                for (
+                    const referencedStep
+                    of referencedSteps
+                ) {
+                    const generatedStepId =
+                        this.createStepId(
+                            steps.length + 1
+                        );
+
+                    steps.push({
+                        ...referencedStep,
+
+                        id:
+                            generatedStepId,
+
+                        name:
+                            `${stepName} › ` +
+                            `[${referencedTestCaseId}] ` +
+                            `${referencedStep.name}`
+                    });
+                }
+
+                /*
+                 * Continue with the next row
+                 * from the parent testcase.
+                 */
+                continue;
+            }
+
+            /*
+             * Y means this is a normal executable step.
+             */
             const action =
                 this.normalizeAction(
                     excelAction,
-                    testCaseId,
+                    normalizedTestCaseId,
                     rowNumber
                 );
 
             this.validateStep(
-                testCaseId,
+                normalizedTestCaseId,
                 rowNumber,
                 stepName,
                 action,
-                xpath,
+                locatorType,
+                locatorValue,
                 url,
                 value
             );
 
             const stepId =
-                `STEP${String(
+                this.createStepId(
                     steps.length + 1
-                ).padStart(3, '0')}`;
+                );
 
             const step:
                 TestStep = {
-                id:stepId,
-                name:stepName,
+
+                id:
+                    stepId,
+
+                name:
+                    stepName,
+
                 action,
-                captureScreenshot:true
+
+                captureScreenshot:
+                    true
             };
 
             switch (action) {
 
-                case 'navigate':
-                    step.value =url;
+                case 'navigate': {
+
+                    step.value =
+                        url;
+
                     break;
+                }
 
-                case 'scroll':
-                    step.value =value;
-                    break;
-
-                case 'verifyUrl':
-
-                    /*
-                     * For verifyurl, the user can enter the expected
-                     * address in URL. Value is also supported.
-                     */
-                    step.expectedValue =url || value;
-                    break;
-
-                case 'fill':
-
-                    step.locator = {
-                        type: 'xpath',
-                        value: xpath
-                    };
-
-                    step.value =value;
-                    break;
-
-                case 'verifyText':
-
-                    step.locator = {
-                        type: 'xpath',
-                        value: xpath
-                    };
-
-                    step.expectedValue =
-                        value;
-                    break;
-
-                case 'selectOption':
-
-                    step.locator = {
-                        type: 'xpath',
-                        value: xpath
-                    };
+                case 'scroll': {
 
                     step.value =
                         value;
 
                     break;
+                }
 
-                default:
+                case 'verifyUrl': {
 
-                    step.locator = {
-                        type: 'xpath',
-                        value: xpath
-                    };
+                    step.expectedValue =
+                        url || value;
 
                     break;
+                }
+
+                case 'fill': {
+
+                    step.locator =
+                        this.createLocatorDefinition(
+                            locatorType,
+                            locatorValue,
+                            normalizedTestCaseId,
+                            rowNumber
+                        );
+
+                    step.value =
+                        value;
+
+                    break;
+                }
+
+                case 'verifyText': {
+
+                    step.locator =
+                        this.createLocatorDefinition(
+                            locatorType,
+                            locatorValue,
+                            normalizedTestCaseId,
+                            rowNumber
+                        );
+
+                    step.expectedValue =
+                        value;
+
+                    break;
+                }
+
+                case 'selectOption': {
+
+                    step.locator =
+                        this.createLocatorDefinition(
+                            locatorType,
+                            locatorValue,
+                            normalizedTestCaseId,
+                            rowNumber
+                        );
+
+                    step.value =
+                        value;
+
+                    break;
+                }
+
+                default: {
+
+                    step.locator =
+                        this.createLocatorDefinition(
+                            locatorType,
+                            locatorValue,
+                            normalizedTestCaseId,
+                            rowNumber
+                        );
+
+                    break;
+                }
             }
 
             steps.push(
@@ -391,13 +721,55 @@ export class ExcelTestCaseLoader {
             );
         }
 
-        if (steps.length === 0) {
-            throw new Error(
-                `No executable steps were found in worksheet "${testCaseId}".`
-            );
-        }
-
         return steps;
+    }
+
+    private static createLocatorDefinition(
+        locatorType: string,
+        locatorValue: string,
+        testCaseId: string,
+        rowNumber: number
+    ) {
+
+        return {
+            type:
+                this.normalizeLocatorType(
+                    locatorType,
+                    testCaseId,
+                    rowNumber
+                ),
+
+            value:
+                locatorValue
+        };
+    }
+
+    private static createStepId(
+        stepNumber: number
+    ): string {
+
+        return `STEP${String(
+            stepNumber
+        ).padStart(3, '0')}`;
+    }
+
+    private static getWorksheetByName(
+        workbook: ExcelJS.Workbook,
+        worksheetName: string
+    ): ExcelJS.Worksheet | undefined {
+
+        const normalizedName =
+            worksheetName
+                .trim()
+                .toUpperCase();
+
+        return workbook.worksheets.find(
+            worksheet =>
+                worksheet.name
+                    .trim()
+                    .toUpperCase() ===
+                normalizedName
+        );
     }
 
     private static normalizeAction(
@@ -415,17 +787,26 @@ export class ExcelTestCaseLoader {
         const actionMap:
             Record<string, ActionType> = {
 
-            navigate:'navigate',
-            click:'click',
-            scroll: 'scroll',
-            verify:'verifyVisible',
-            /*
-             * Backward compatibility for the sample data currently
-             * present in the workbook.
-             */
-            verifyvisible:'verifyVisible',
+            navigate:
+                'navigate',
 
-            fill:'fill',
+            click:
+                'click',
+
+            scroll:
+                'scroll',
+
+            verify:
+                'verifyVisible',
+
+            verifyvisible:
+                'verifyVisible',
+
+            'verify visible':
+                'verifyVisible',
+
+            fill:
+                'fill',
 
             'verify text':
                 'verifyText',
@@ -434,6 +815,9 @@ export class ExcelTestCaseLoader {
                 'verifyText',
 
             verifyurl:
+                'verifyUrl',
+
+            'verify url':
                 'verifyUrl',
 
             'select option':
@@ -456,12 +840,55 @@ export class ExcelTestCaseLoader {
         return action;
     }
 
+    private static normalizeLocatorType(
+        excelLocatorType: string,
+        testCaseId: string,
+        rowNumber: number
+    ): LocatorType {
+
+        const normalized =
+            excelLocatorType
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, ' ');
+
+        const locatorMap:
+            Record<string, LocatorType> = {
+
+            role:
+                'role',
+
+            id:
+                'id',
+
+            css:
+                'css',
+
+            xpath:
+                'xpath'
+        };
+
+        const locatorType =
+            locatorMap[normalized];
+
+        if (!locatorType) {
+            throw new Error(
+                `${testCaseId}, Excel row ${rowNumber}: ` +
+                `Unsupported Locator Type "${excelLocatorType}". ` +
+                `Supported values are role, id, css, and xpath.`
+            );
+        }
+
+        return locatorType;
+    }
+
     private static validateStep(
         testCaseId: string,
         rowNumber: number,
         stepName: string,
         action: ActionType,
-        xpath: string,
+        locatorType: string,
+        locatorValue: string,
         url: string,
         value: string
     ): void {
@@ -475,6 +902,9 @@ export class ExcelTestCaseLoader {
             );
         }
 
+        /*
+         * Navigate uses URL and does not need a locator.
+         */
         if (
             action === 'navigate' &&
             !url
@@ -484,6 +914,9 @@ export class ExcelTestCaseLoader {
             );
         }
 
+        /*
+         * Scroll uses Value as the vertical scroll amount.
+         */
         if (
             action === 'scroll' &&
             !value
@@ -493,6 +926,10 @@ export class ExcelTestCaseLoader {
             );
         }
 
+        /*
+         * Verify URL accepts the expected address
+         * from URL or Value.
+         */
         if (
             action === 'verifyUrl' &&
             !url &&
@@ -503,7 +940,7 @@ export class ExcelTestCaseLoader {
             );
         }
 
-        const xpathRequiredActions:
+        const locatorRequiredActions:
             ActionType[] = [
                 'click',
                 'fill',
@@ -513,13 +950,29 @@ export class ExcelTestCaseLoader {
             ];
 
         if (
-            xpathRequiredActions.includes(
+            locatorRequiredActions.includes(
                 action
-            ) &&
-            !xpath
+            )
         ) {
-            throw new Error(
-                `${location}: ${action} requires XPath.`
+            if (!locatorType) {
+                throw new Error(
+                    `${location}: ${action} requires Locator Type.`
+                );
+            }
+
+            if (!locatorValue) {
+                throw new Error(
+                    `${location}: ${action} requires Locator Value.`
+                );
+            }
+
+            /*
+             * Validate Locator Type while loading Excel.
+             */
+            this.normalizeLocatorType(
+                locatorType,
+                testCaseId,
+                rowNumber
             );
         }
 

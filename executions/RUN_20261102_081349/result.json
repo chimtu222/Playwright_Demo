@@ -1,0 +1,3406 @@
+{
+    "executionId": "RUN_20261102_081349",
+    "status": "Failed",
+    "environment": "Excel",
+    "browser": "chromium",
+    "startTime": "2026-11-02T08:13:49.586Z",
+    "endTime": "2026-11-02T08:16:49.682Z",
+    "duration": 180096,
+    "totalTestCases": 8,
+    "passedTestCases": 4,
+    "failedTestCases": 4,
+    "testCases": [
+        {
+            "testCaseId": "TC001",
+            "testCaseName": "Valid OrangeHRM Login",
+            "description": "Valid OrangeHRM Login",
+            "module": "Authentication",
+            "priority": "High",
+            "status": "Passed",
+            "startTime": "2026-11-02T08:13:58.458Z",
+            "endTime": "2026-11-02T08:14:14.098Z",
+            "duration": 15640,
+            "totalSteps": 7,
+            "passedSteps": 7,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:13:58.458Z",
+                    "endTime": "2026-11-02T08:14:05.225Z",
+                    "duration": 6767,
+                    "screenshot": "screenshots/TC001_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:05.225Z",
+                    "endTime": "2026-11-02T08:14:06.608Z",
+                    "duration": 1383,
+                    "screenshot": "screenshots/TC001_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.608Z",
+                    "endTime": "2026-11-02T08:14:06.884Z",
+                    "duration": 276,
+                    "screenshot": "screenshots/TC001_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.884Z",
+                    "endTime": "2026-11-02T08:14:07.099Z",
+                    "duration": 215,
+                    "screenshot": "screenshots/TC001_STEP004_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:07.099Z",
+                    "endTime": "2026-11-02T08:14:07.286Z",
+                    "duration": 187,
+                    "screenshot": "screenshots/TC001_STEP005_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:07.286Z",
+                    "endTime": "2026-11-02T08:14:09.370Z",
+                    "duration": 2084,
+                    "screenshot": "screenshots/TC001_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:09.370Z",
+                    "endTime": "2026-11-02T08:14:14.097Z",
+                    "duration": 4727,
+                    "screenshot": "screenshots/TC001_STEP007_Verify_Dashboard_heading.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC002",
+            "testCaseName": "OrangeHRM Cross-Module Navigation and UI Validation",
+            "description": "OrangeHRM Cross-Module Navigation and UI Validation",
+            "module": "Feature",
+            "priority": "Medium",
+            "status": "Failed",
+            "startTime": "2026-11-02T08:13:58.682Z",
+            "endTime": "2026-11-02T08:14:17.108Z",
+            "duration": 18426,
+            "totalSteps": 219,
+            "passedSteps": 9,
+            "failedSteps": 1,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Log in to Orange HRM › [TC001] Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:13:58.682Z",
+                    "endTime": "2026-11-02T08:14:05.204Z",
+                    "duration": 6522,
+                    "screenshot": "screenshots/TC002_STEP001_Log_in_to_Orange_HRM_TC001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:05.205Z",
+                    "endTime": "2026-11-02T08:14:07.774Z",
+                    "duration": 2569,
+                    "screenshot": "screenshots/TC002_STEP002_Log_in_to_Orange_HRM_TC001_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:07.775Z",
+                    "endTime": "2026-11-02T08:14:07.915Z",
+                    "duration": 140,
+                    "screenshot": "screenshots/TC002_STEP003_Log_in_to_Orange_HRM_TC001_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:07.916Z",
+                    "endTime": "2026-11-02T08:14:08.124Z",
+                    "duration": 208,
+                    "screenshot": "screenshots/TC002_STEP004_Log_in_to_Orange_HRM_TC001_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:08.124Z",
+                    "endTime": "2026-11-02T08:14:08.330Z",
+                    "duration": 206,
+                    "screenshot": "screenshots/TC002_STEP005_Log_in_to_Orange_HRM_TC001_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Log in to Orange HRM › [TC001] Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:08.330Z",
+                    "endTime": "2026-11-02T08:14:10.020Z",
+                    "duration": 1690,
+                    "screenshot": "screenshots/TC002_STEP006_Log_in_to_Orange_HRM_TC001_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:10.020Z",
+                    "endTime": "2026-11-02T08:14:15.012Z",
+                    "duration": 4992,
+                    "screenshot": "screenshots/TC002_STEP007_Log_in_to_Orange_HRM_TC001_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Iteration 01 - Click PIM menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:15.013Z",
+                    "endTime": "2026-11-02T08:14:16.197Z",
+                    "duration": 1184,
+                    "screenshot": "screenshots/TC002_STEP008_Iteration_01_-_Click_PIM_menu.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Iteration 01 - Verify PIM heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:16.198Z",
+                    "endTime": "2026-11-02T08:14:16.773Z",
+                    "duration": 575,
+                    "screenshot": "screenshots/TC002_STEP009_Iteration_01_-_Verify_PIM_heading.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Iteration 01 - Verify Employee Information title",
+                    "action": "verifyVisible",
+                    "status": "Failed",
+                    "startTime": "2026-11-02T08:14:16.774Z",
+                    "endTime": "2026-11-02T08:14:16.875Z",
+                    "duration": 101,
+                    "screenshot": "screenshots/TC002_STEP010_Iteration_01_-_Verify_Employee_Information_title_FAILED.png",
+                    "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//*[normalize-space()=\"Employee Information\"]')\nExpected: visible\nError: strict mode violation: locator('//*[normalize-space()=\"Employee Information\"]') resolved to 3 elements:\n    1) <div data-v-b4b62742=\"\" class=\"oxd-table-filter-header\">…</div> aka locator('div').filter({ hasText: /^Employee Information$/ }).first()\n    2) <div data-v-b4b62742=\"\" class=\"oxd-table-filter-header-title\">…</div> aka locator('div').filter({ hasText: /^Employee Information$/ }).nth(1)\n    3) <h5 data-v-7b563373=\"\" data-v-b4b62742=\"\" class=\"oxd-text oxd-text--h5 oxd-table-filter-title\">Employee Information</h5> aka getByRole('heading', { name: 'Employee Information' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//*[normalize-space()=\"Employee Information\"]') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[normalize-space()=\"Employee Information\"]')\u001b[22m\n"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC003",
+            "testCaseName": "OrangeHRM Employee Search and Filter Validation",
+            "description": "OrangeHRM Employee Search and Filter Validation",
+            "module": "Feature",
+            "priority": "Medium",
+            "status": "Passed",
+            "startTime": "2026-11-02T08:13:58.891Z",
+            "endTime": "2026-11-02T08:16:49.653Z",
+            "duration": 170762,
+            "totalSteps": 202,
+            "passedSteps": 202,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Log in to Orange HRM › [TC001] Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:13:58.891Z",
+                    "endTime": "2026-11-02T08:14:04.786Z",
+                    "duration": 5895,
+                    "screenshot": "screenshots/TC003_STEP001_Log_in_to_Orange_HRM_TC001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:04.787Z",
+                    "endTime": "2026-11-02T08:14:06.420Z",
+                    "duration": 1633,
+                    "screenshot": "screenshots/TC003_STEP002_Log_in_to_Orange_HRM_TC001_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.421Z",
+                    "endTime": "2026-11-02T08:14:06.624Z",
+                    "duration": 203,
+                    "screenshot": "screenshots/TC003_STEP003_Log_in_to_Orange_HRM_TC001_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.624Z",
+                    "endTime": "2026-11-02T08:14:06.889Z",
+                    "duration": 265,
+                    "screenshot": "screenshots/TC003_STEP004_Log_in_to_Orange_HRM_TC001_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.889Z",
+                    "endTime": "2026-11-02T08:14:07.092Z",
+                    "duration": 203,
+                    "screenshot": "screenshots/TC003_STEP005_Log_in_to_Orange_HRM_TC001_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Log in to Orange HRM › [TC001] Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:07.093Z",
+                    "endTime": "2026-11-02T08:14:09.916Z",
+                    "duration": 2823,
+                    "screenshot": "screenshots/TC003_STEP006_Log_in_to_Orange_HRM_TC001_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:09.916Z",
+                    "endTime": "2026-11-02T08:14:13.796Z",
+                    "duration": 3880,
+                    "screenshot": "screenshots/TC003_STEP007_Log_in_to_Orange_HRM_TC001_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify 'Time at Work' is visible",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:13.796Z",
+                    "endTime": "2026-11-02T08:14:15.027Z",
+                    "duration": 1231,
+                    "screenshot": "screenshots/TC003_STEP008_Verify_Time_at_Work_is_visible.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Valid cycle 01 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:15.027Z",
+                    "endTime": "2026-11-02T08:14:15.749Z",
+                    "duration": 722,
+                    "screenshot": "screenshots/TC003_STEP009_Valid_cycle_01_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Valid cycle 01 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:15.750Z",
+                    "endTime": "2026-11-02T08:14:17.287Z",
+                    "duration": 1537,
+                    "screenshot": "screenshots/TC003_STEP010_Valid_cycle_01_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Valid cycle 02 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:17.288Z",
+                    "endTime": "2026-11-02T08:14:18.291Z",
+                    "duration": 1003,
+                    "screenshot": "screenshots/TC003_STEP011_Valid_cycle_02_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Valid cycle 02 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:18.291Z",
+                    "endTime": "2026-11-02T08:14:18.669Z",
+                    "duration": 378,
+                    "screenshot": "screenshots/TC003_STEP012_Valid_cycle_02_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Valid cycle 02 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:18.670Z",
+                    "endTime": "2026-11-02T08:14:18.829Z",
+                    "duration": 159,
+                    "screenshot": "screenshots/TC003_STEP013_Valid_cycle_02_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP014",
+                    "stepName": "Valid cycle 02 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:18.829Z",
+                    "endTime": "2026-11-02T08:14:19.012Z",
+                    "duration": 183,
+                    "screenshot": "screenshots/TC003_STEP014_Valid_cycle_02_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP015",
+                    "stepName": "Valid cycle 02 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:19.012Z",
+                    "endTime": "2026-11-02T08:14:19.207Z",
+                    "duration": 195,
+                    "screenshot": "screenshots/TC003_STEP015_Valid_cycle_02_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP016",
+                    "stepName": "Valid cycle 02 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:19.208Z",
+                    "endTime": "2026-11-02T08:14:20.688Z",
+                    "duration": 1480,
+                    "screenshot": "screenshots/TC003_STEP016_Valid_cycle_02_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP017",
+                    "stepName": "Valid cycle 02 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:20.688Z",
+                    "endTime": "2026-11-02T08:14:21.539Z",
+                    "duration": 851,
+                    "screenshot": "screenshots/TC003_STEP017_Valid_cycle_02_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP018",
+                    "stepName": "Valid cycle 02 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:21.539Z",
+                    "endTime": "2026-11-02T08:14:22.340Z",
+                    "duration": 801,
+                    "screenshot": "screenshots/TC003_STEP018_Valid_cycle_02_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP019",
+                    "stepName": "Valid cycle 02 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:22.340Z",
+                    "endTime": "2026-11-02T08:14:23.506Z",
+                    "duration": 1166,
+                    "screenshot": "screenshots/TC003_STEP019_Valid_cycle_02_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP020",
+                    "stepName": "Valid cycle 03 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:23.506Z",
+                    "endTime": "2026-11-02T08:14:24.300Z",
+                    "duration": 794,
+                    "screenshot": "screenshots/TC003_STEP020_Valid_cycle_03_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP021",
+                    "stepName": "Valid cycle 03 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:24.300Z",
+                    "endTime": "2026-11-02T08:14:24.711Z",
+                    "duration": 411,
+                    "screenshot": "screenshots/TC003_STEP021_Valid_cycle_03_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP022",
+                    "stepName": "Valid cycle 03 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:24.711Z",
+                    "endTime": "2026-11-02T08:14:24.920Z",
+                    "duration": 209,
+                    "screenshot": "screenshots/TC003_STEP022_Valid_cycle_03_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP023",
+                    "stepName": "Valid cycle 03 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:24.920Z",
+                    "endTime": "2026-11-02T08:14:25.157Z",
+                    "duration": 237,
+                    "screenshot": "screenshots/TC003_STEP023_Valid_cycle_03_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP024",
+                    "stepName": "Valid cycle 03 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.157Z",
+                    "endTime": "2026-11-02T08:14:25.434Z",
+                    "duration": 277,
+                    "screenshot": "screenshots/TC003_STEP024_Valid_cycle_03_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP025",
+                    "stepName": "Valid cycle 03 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.435Z",
+                    "endTime": "2026-11-02T08:14:28.356Z",
+                    "duration": 2921,
+                    "screenshot": "screenshots/TC003_STEP025_Valid_cycle_03_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP026",
+                    "stepName": "Valid cycle 03 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:28.356Z",
+                    "endTime": "2026-11-02T08:14:29.086Z",
+                    "duration": 730,
+                    "screenshot": "screenshots/TC003_STEP026_Valid_cycle_03_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP027",
+                    "stepName": "Valid cycle 03 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:29.086Z",
+                    "endTime": "2026-11-02T08:14:29.610Z",
+                    "duration": 524,
+                    "screenshot": "screenshots/TC003_STEP027_Valid_cycle_03_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP028",
+                    "stepName": "Valid cycle 03 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:29.610Z",
+                    "endTime": "2026-11-02T08:14:31.700Z",
+                    "duration": 2090,
+                    "screenshot": "screenshots/TC003_STEP028_Valid_cycle_03_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP029",
+                    "stepName": "Valid cycle 04 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:31.700Z",
+                    "endTime": "2026-11-02T08:14:33.166Z",
+                    "duration": 1466,
+                    "screenshot": "screenshots/TC003_STEP029_Valid_cycle_04_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP030",
+                    "stepName": "Valid cycle 04 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.166Z",
+                    "endTime": "2026-11-02T08:14:33.612Z",
+                    "duration": 446,
+                    "screenshot": "screenshots/TC003_STEP030_Valid_cycle_04_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP031",
+                    "stepName": "Valid cycle 04 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.613Z",
+                    "endTime": "2026-11-02T08:14:33.778Z",
+                    "duration": 165,
+                    "screenshot": "screenshots/TC003_STEP031_Valid_cycle_04_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP032",
+                    "stepName": "Valid cycle 04 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.778Z",
+                    "endTime": "2026-11-02T08:14:33.961Z",
+                    "duration": 183,
+                    "screenshot": "screenshots/TC003_STEP032_Valid_cycle_04_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP033",
+                    "stepName": "Valid cycle 04 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.961Z",
+                    "endTime": "2026-11-02T08:14:34.256Z",
+                    "duration": 295,
+                    "screenshot": "screenshots/TC003_STEP033_Valid_cycle_04_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP034",
+                    "stepName": "Valid cycle 04 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:34.256Z",
+                    "endTime": "2026-11-02T08:14:36.211Z",
+                    "duration": 1955,
+                    "screenshot": "screenshots/TC003_STEP034_Valid_cycle_04_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP035",
+                    "stepName": "Valid cycle 04 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:36.211Z",
+                    "endTime": "2026-11-02T08:14:37.568Z",
+                    "duration": 1357,
+                    "screenshot": "screenshots/TC003_STEP035_Valid_cycle_04_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP036",
+                    "stepName": "Valid cycle 04 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:37.569Z",
+                    "endTime": "2026-11-02T08:14:38.055Z",
+                    "duration": 486,
+                    "screenshot": "screenshots/TC003_STEP036_Valid_cycle_04_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP037",
+                    "stepName": "Valid cycle 04 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:38.055Z",
+                    "endTime": "2026-11-02T08:14:40.379Z",
+                    "duration": 2324,
+                    "screenshot": "screenshots/TC003_STEP037_Valid_cycle_04_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP038",
+                    "stepName": "Valid cycle 05 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.379Z",
+                    "endTime": "2026-11-02T08:14:42.776Z",
+                    "duration": 2397,
+                    "screenshot": "screenshots/TC003_STEP038_Valid_cycle_05_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP039",
+                    "stepName": "Valid cycle 05 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:42.776Z",
+                    "endTime": "2026-11-02T08:14:44.217Z",
+                    "duration": 1441,
+                    "screenshot": "screenshots/TC003_STEP039_Valid_cycle_05_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP040",
+                    "stepName": "Valid cycle 05 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.217Z",
+                    "endTime": "2026-11-02T08:14:44.358Z",
+                    "duration": 141,
+                    "screenshot": "screenshots/TC003_STEP040_Valid_cycle_05_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP041",
+                    "stepName": "Valid cycle 05 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.358Z",
+                    "endTime": "2026-11-02T08:14:44.532Z",
+                    "duration": 174,
+                    "screenshot": "screenshots/TC003_STEP041_Valid_cycle_05_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP042",
+                    "stepName": "Valid cycle 05 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.533Z",
+                    "endTime": "2026-11-02T08:14:44.710Z",
+                    "duration": 177,
+                    "screenshot": "screenshots/TC003_STEP042_Valid_cycle_05_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP043",
+                    "stepName": "Valid cycle 05 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.710Z",
+                    "endTime": "2026-11-02T08:14:48.268Z",
+                    "duration": 3558,
+                    "screenshot": "screenshots/TC003_STEP043_Valid_cycle_05_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP044",
+                    "stepName": "Valid cycle 05 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:48.268Z",
+                    "endTime": "2026-11-02T08:14:49.359Z",
+                    "duration": 1091,
+                    "screenshot": "screenshots/TC003_STEP044_Valid_cycle_05_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP045",
+                    "stepName": "Valid cycle 05 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:49.359Z",
+                    "endTime": "2026-11-02T08:14:49.853Z",
+                    "duration": 494,
+                    "screenshot": "screenshots/TC003_STEP045_Valid_cycle_05_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP046",
+                    "stepName": "Valid cycle 05 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:49.853Z",
+                    "endTime": "2026-11-02T08:14:52.697Z",
+                    "duration": 2844,
+                    "screenshot": "screenshots/TC003_STEP046_Valid_cycle_05_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP047",
+                    "stepName": "Valid cycle 06 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:52.697Z",
+                    "endTime": "2026-11-02T08:14:53.743Z",
+                    "duration": 1046,
+                    "screenshot": "screenshots/TC003_STEP047_Valid_cycle_06_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP048",
+                    "stepName": "Valid cycle 06 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:53.743Z",
+                    "endTime": "2026-11-02T08:14:54.244Z",
+                    "duration": 501,
+                    "screenshot": "screenshots/TC003_STEP048_Valid_cycle_06_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP049",
+                    "stepName": "Valid cycle 06 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:54.244Z",
+                    "endTime": "2026-11-02T08:14:54.401Z",
+                    "duration": 157,
+                    "screenshot": "screenshots/TC003_STEP049_Valid_cycle_06_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP050",
+                    "stepName": "Valid cycle 06 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:54.401Z",
+                    "endTime": "2026-11-02T08:14:54.753Z",
+                    "duration": 352,
+                    "screenshot": "screenshots/TC003_STEP050_Valid_cycle_06_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP051",
+                    "stepName": "Valid cycle 06 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:54.753Z",
+                    "endTime": "2026-11-02T08:14:55.147Z",
+                    "duration": 394,
+                    "screenshot": "screenshots/TC003_STEP051_Valid_cycle_06_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP052",
+                    "stepName": "Valid cycle 06 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:55.147Z",
+                    "endTime": "2026-11-02T08:14:56.617Z",
+                    "duration": 1470,
+                    "screenshot": "screenshots/TC003_STEP052_Valid_cycle_06_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP053",
+                    "stepName": "Valid cycle 06 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:56.617Z",
+                    "endTime": "2026-11-02T08:14:57.450Z",
+                    "duration": 833,
+                    "screenshot": "screenshots/TC003_STEP053_Valid_cycle_06_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP054",
+                    "stepName": "Valid cycle 06 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:57.450Z",
+                    "endTime": "2026-11-02T08:14:58.079Z",
+                    "duration": 629,
+                    "screenshot": "screenshots/TC003_STEP054_Valid_cycle_06_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP055",
+                    "stepName": "Valid cycle 06 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:58.079Z",
+                    "endTime": "2026-11-02T08:15:00.379Z",
+                    "duration": 2300,
+                    "screenshot": "screenshots/TC003_STEP055_Valid_cycle_06_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP056",
+                    "stepName": "Valid cycle 07 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:00.379Z",
+                    "endTime": "2026-11-02T08:15:01.829Z",
+                    "duration": 1450,
+                    "screenshot": "screenshots/TC003_STEP056_Valid_cycle_07_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP057",
+                    "stepName": "Valid cycle 07 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:01.829Z",
+                    "endTime": "2026-11-02T08:15:02.789Z",
+                    "duration": 960,
+                    "screenshot": "screenshots/TC003_STEP057_Valid_cycle_07_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP058",
+                    "stepName": "Valid cycle 07 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:02.790Z",
+                    "endTime": "2026-11-02T08:15:02.913Z",
+                    "duration": 123,
+                    "screenshot": "screenshots/TC003_STEP058_Valid_cycle_07_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP059",
+                    "stepName": "Valid cycle 07 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:02.913Z",
+                    "endTime": "2026-11-02T08:15:03.040Z",
+                    "duration": 127,
+                    "screenshot": "screenshots/TC003_STEP059_Valid_cycle_07_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP060",
+                    "stepName": "Valid cycle 07 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:03.041Z",
+                    "endTime": "2026-11-02T08:15:03.187Z",
+                    "duration": 146,
+                    "screenshot": "screenshots/TC003_STEP060_Valid_cycle_07_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP061",
+                    "stepName": "Valid cycle 07 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:03.187Z",
+                    "endTime": "2026-11-02T08:15:05.711Z",
+                    "duration": 2524,
+                    "screenshot": "screenshots/TC003_STEP061_Valid_cycle_07_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP062",
+                    "stepName": "Valid cycle 07 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:05.712Z",
+                    "endTime": "2026-11-02T08:15:07.224Z",
+                    "duration": 1512,
+                    "screenshot": "screenshots/TC003_STEP062_Valid_cycle_07_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP063",
+                    "stepName": "Valid cycle 07 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:07.225Z",
+                    "endTime": "2026-11-02T08:15:07.786Z",
+                    "duration": 561,
+                    "screenshot": "screenshots/TC003_STEP063_Valid_cycle_07_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP064",
+                    "stepName": "Valid cycle 07 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:07.786Z",
+                    "endTime": "2026-11-02T08:15:10.686Z",
+                    "duration": 2900,
+                    "screenshot": "screenshots/TC003_STEP064_Valid_cycle_07_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP065",
+                    "stepName": "Valid cycle 08 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:10.686Z",
+                    "endTime": "2026-11-02T08:15:12.123Z",
+                    "duration": 1437,
+                    "screenshot": "screenshots/TC003_STEP065_Valid_cycle_08_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP066",
+                    "stepName": "Valid cycle 08 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:12.124Z",
+                    "endTime": "2026-11-02T08:15:13.170Z",
+                    "duration": 1046,
+                    "screenshot": "screenshots/TC003_STEP066_Valid_cycle_08_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP067",
+                    "stepName": "Valid cycle 08 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:13.170Z",
+                    "endTime": "2026-11-02T08:15:13.272Z",
+                    "duration": 102,
+                    "screenshot": "screenshots/TC003_STEP067_Valid_cycle_08_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP068",
+                    "stepName": "Valid cycle 08 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:13.272Z",
+                    "endTime": "2026-11-02T08:15:13.391Z",
+                    "duration": 119,
+                    "screenshot": "screenshots/TC003_STEP068_Valid_cycle_08_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP069",
+                    "stepName": "Valid cycle 08 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:13.391Z",
+                    "endTime": "2026-11-02T08:15:13.540Z",
+                    "duration": 149,
+                    "screenshot": "screenshots/TC003_STEP069_Valid_cycle_08_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP070",
+                    "stepName": "Valid cycle 08 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:13.540Z",
+                    "endTime": "2026-11-02T08:15:18.484Z",
+                    "duration": 4944,
+                    "screenshot": "screenshots/TC003_STEP070_Valid_cycle_08_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP071",
+                    "stepName": "Valid cycle 08 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:18.484Z",
+                    "endTime": "2026-11-02T08:15:19.519Z",
+                    "duration": 1035,
+                    "screenshot": "screenshots/TC003_STEP071_Valid_cycle_08_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP072",
+                    "stepName": "Valid cycle 08 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:19.519Z",
+                    "endTime": "2026-11-02T08:15:19.720Z",
+                    "duration": 201,
+                    "screenshot": "screenshots/TC003_STEP072_Valid_cycle_08_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP073",
+                    "stepName": "Valid cycle 08 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:19.720Z",
+                    "endTime": "2026-11-02T08:15:25.909Z",
+                    "duration": 6189,
+                    "screenshot": "screenshots/TC003_STEP073_Valid_cycle_08_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP074",
+                    "stepName": "Valid cycle 09 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:25.909Z",
+                    "endTime": "2026-11-02T08:15:27.656Z",
+                    "duration": 1747,
+                    "screenshot": "screenshots/TC003_STEP074_Valid_cycle_09_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP075",
+                    "stepName": "Valid cycle 09 - Verify username",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:27.656Z",
+                    "endTime": "2026-11-02T08:15:28.598Z",
+                    "duration": 942,
+                    "screenshot": "screenshots/TC003_STEP075_Valid_cycle_09_-_Verify_username.png"
+                },
+                {
+                    "stepId": "STEP076",
+                    "stepName": "Valid cycle 09 - Verify password",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:28.599Z",
+                    "endTime": "2026-11-02T08:15:28.685Z",
+                    "duration": 86,
+                    "screenshot": "screenshots/TC003_STEP076_Valid_cycle_09_-_Verify_password.png"
+                },
+                {
+                    "stepId": "STEP077",
+                    "stepName": "Valid cycle 09 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:28.685Z",
+                    "endTime": "2026-11-02T08:15:28.790Z",
+                    "duration": 105,
+                    "screenshot": "screenshots/TC003_STEP077_Valid_cycle_09_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP078",
+                    "stepName": "Valid cycle 09 - Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:28.790Z",
+                    "endTime": "2026-11-02T08:15:28.908Z",
+                    "duration": 118,
+                    "screenshot": "screenshots/TC003_STEP078_Valid_cycle_09_-_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP079",
+                    "stepName": "Valid cycle 09 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:28.908Z",
+                    "endTime": "2026-11-02T08:15:31.286Z",
+                    "duration": 2378,
+                    "screenshot": "screenshots/TC003_STEP079_Valid_cycle_09_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP080",
+                    "stepName": "Valid cycle 09 - Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:31.286Z",
+                    "endTime": "2026-11-02T08:15:32.317Z",
+                    "duration": 1031,
+                    "screenshot": "screenshots/TC003_STEP080_Valid_cycle_09_-_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP081",
+                    "stepName": "Valid cycle 09 - Open user menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:32.317Z",
+                    "endTime": "2026-11-02T08:15:32.550Z",
+                    "duration": 233,
+                    "screenshot": "screenshots/TC003_STEP081_Valid_cycle_09_-_Open_user_menu.png"
+                },
+                {
+                    "stepId": "STEP082",
+                    "stepName": "Valid cycle 09 - Click Logout",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:32.551Z",
+                    "endTime": "2026-11-02T08:15:33.852Z",
+                    "duration": 1301,
+                    "screenshot": "screenshots/TC003_STEP082_Valid_cycle_09_-_Click_Logout.png"
+                },
+                {
+                    "stepId": "STEP083",
+                    "stepName": "Invalid cycle 01 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:33.852Z",
+                    "endTime": "2026-11-02T08:15:34.583Z",
+                    "duration": 731,
+                    "screenshot": "screenshots/TC003_STEP083_Invalid_cycle_01_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP084",
+                    "stepName": "Invalid cycle 01 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:34.583Z",
+                    "endTime": "2026-11-02T08:15:34.914Z",
+                    "duration": 331,
+                    "screenshot": "screenshots/TC003_STEP084_Invalid_cycle_01_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP085",
+                    "stepName": "Invalid cycle 01 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:34.914Z",
+                    "endTime": "2026-11-02T08:15:35.007Z",
+                    "duration": 93,
+                    "screenshot": "screenshots/TC003_STEP085_Invalid_cycle_01_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP086",
+                    "stepName": "Invalid cycle 01 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:35.008Z",
+                    "endTime": "2026-11-02T08:15:36.602Z",
+                    "duration": 1594,
+                    "screenshot": "screenshots/TC003_STEP086_Invalid_cycle_01_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP087",
+                    "stepName": "Invalid cycle 01 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:36.602Z",
+                    "endTime": "2026-11-02T08:15:37.035Z",
+                    "duration": 433,
+                    "screenshot": "screenshots/TC003_STEP087_Invalid_cycle_01_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP088",
+                    "stepName": "Invalid cycle 01 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:37.036Z",
+                    "endTime": "2026-11-02T08:15:37.135Z",
+                    "duration": 99,
+                    "screenshot": "screenshots/TC003_STEP088_Invalid_cycle_01_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP089",
+                    "stepName": "Invalid cycle 02 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:37.135Z",
+                    "endTime": "2026-11-02T08:15:37.862Z",
+                    "duration": 727,
+                    "screenshot": "screenshots/TC003_STEP089_Invalid_cycle_02_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP090",
+                    "stepName": "Invalid cycle 02 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:37.862Z",
+                    "endTime": "2026-11-02T08:15:38.825Z",
+                    "duration": 963,
+                    "screenshot": "screenshots/TC003_STEP090_Invalid_cycle_02_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP091",
+                    "stepName": "Invalid cycle 02 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:38.825Z",
+                    "endTime": "2026-11-02T08:15:38.924Z",
+                    "duration": 99,
+                    "screenshot": "screenshots/TC003_STEP091_Invalid_cycle_02_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP092",
+                    "stepName": "Invalid cycle 02 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:38.924Z",
+                    "endTime": "2026-11-02T08:15:39.041Z",
+                    "duration": 117,
+                    "screenshot": "screenshots/TC003_STEP092_Invalid_cycle_02_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP093",
+                    "stepName": "Invalid cycle 02 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:39.042Z",
+                    "endTime": "2026-11-02T08:15:42.462Z",
+                    "duration": 3420,
+                    "screenshot": "screenshots/TC003_STEP093_Invalid_cycle_02_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP094",
+                    "stepName": "Invalid cycle 02 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:42.463Z",
+                    "endTime": "2026-11-02T08:15:42.553Z",
+                    "duration": 90,
+                    "screenshot": "screenshots/TC003_STEP094_Invalid_cycle_02_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP095",
+                    "stepName": "Invalid cycle 03 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:42.553Z",
+                    "endTime": "2026-11-02T08:15:43.777Z",
+                    "duration": 1224,
+                    "screenshot": "screenshots/TC003_STEP095_Invalid_cycle_03_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP096",
+                    "stepName": "Invalid cycle 03 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:43.777Z",
+                    "endTime": "2026-11-02T08:15:44.706Z",
+                    "duration": 929,
+                    "screenshot": "screenshots/TC003_STEP096_Invalid_cycle_03_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP097",
+                    "stepName": "Invalid cycle 03 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:44.707Z",
+                    "endTime": "2026-11-02T08:15:44.821Z",
+                    "duration": 114,
+                    "screenshot": "screenshots/TC003_STEP097_Invalid_cycle_03_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP098",
+                    "stepName": "Invalid cycle 03 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:44.821Z",
+                    "endTime": "2026-11-02T08:15:44.953Z",
+                    "duration": 132,
+                    "screenshot": "screenshots/TC003_STEP098_Invalid_cycle_03_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP099",
+                    "stepName": "Invalid cycle 03 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:44.954Z",
+                    "endTime": "2026-11-02T08:15:47.987Z",
+                    "duration": 3033,
+                    "screenshot": "screenshots/TC003_STEP099_Invalid_cycle_03_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP100",
+                    "stepName": "Invalid cycle 03 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:47.987Z",
+                    "endTime": "2026-11-02T08:15:48.083Z",
+                    "duration": 96,
+                    "screenshot": "screenshots/TC003_STEP100_Invalid_cycle_03_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP101",
+                    "stepName": "Invalid cycle 04 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:48.083Z",
+                    "endTime": "2026-11-02T08:15:48.810Z",
+                    "duration": 727,
+                    "screenshot": "screenshots/TC003_STEP101_Invalid_cycle_04_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP102",
+                    "stepName": "Invalid cycle 04 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:48.810Z",
+                    "endTime": "2026-11-02T08:15:49.754Z",
+                    "duration": 944,
+                    "screenshot": "screenshots/TC003_STEP102_Invalid_cycle_04_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP103",
+                    "stepName": "Invalid cycle 04 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:49.755Z",
+                    "endTime": "2026-11-02T08:15:49.857Z",
+                    "duration": 102,
+                    "screenshot": "screenshots/TC003_STEP103_Invalid_cycle_04_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP104",
+                    "stepName": "Invalid cycle 04 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:49.858Z",
+                    "endTime": "2026-11-02T08:15:51.938Z",
+                    "duration": 2080,
+                    "screenshot": "screenshots/TC003_STEP104_Invalid_cycle_04_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP105",
+                    "stepName": "Invalid cycle 04 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:51.938Z",
+                    "endTime": "2026-11-02T08:15:53.391Z",
+                    "duration": 1453,
+                    "screenshot": "screenshots/TC003_STEP105_Invalid_cycle_04_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP106",
+                    "stepName": "Invalid cycle 04 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:53.391Z",
+                    "endTime": "2026-11-02T08:15:53.470Z",
+                    "duration": 79,
+                    "screenshot": "screenshots/TC003_STEP106_Invalid_cycle_04_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP107",
+                    "stepName": "Invalid cycle 05 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:53.470Z",
+                    "endTime": "2026-11-02T08:15:54.474Z",
+                    "duration": 1004,
+                    "screenshot": "screenshots/TC003_STEP107_Invalid_cycle_05_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP108",
+                    "stepName": "Invalid cycle 05 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:54.474Z",
+                    "endTime": "2026-11-02T08:15:55.941Z",
+                    "duration": 1467,
+                    "screenshot": "screenshots/TC003_STEP108_Invalid_cycle_05_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP109",
+                    "stepName": "Invalid cycle 05 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:55.941Z",
+                    "endTime": "2026-11-02T08:15:56.050Z",
+                    "duration": 109,
+                    "screenshot": "screenshots/TC003_STEP109_Invalid_cycle_05_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP110",
+                    "stepName": "Invalid cycle 05 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:56.050Z",
+                    "endTime": "2026-11-02T08:15:57.710Z",
+                    "duration": 1660,
+                    "screenshot": "screenshots/TC003_STEP110_Invalid_cycle_05_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP111",
+                    "stepName": "Invalid cycle 05 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:57.710Z",
+                    "endTime": "2026-11-02T08:15:58.639Z",
+                    "duration": 929,
+                    "screenshot": "screenshots/TC003_STEP111_Invalid_cycle_05_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP112",
+                    "stepName": "Invalid cycle 05 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:58.640Z",
+                    "endTime": "2026-11-02T08:15:58.736Z",
+                    "duration": 96,
+                    "screenshot": "screenshots/TC003_STEP112_Invalid_cycle_05_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP113",
+                    "stepName": "Invalid cycle 06 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:58.736Z",
+                    "endTime": "2026-11-02T08:15:59.565Z",
+                    "duration": 829,
+                    "screenshot": "screenshots/TC003_STEP113_Invalid_cycle_06_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP114",
+                    "stepName": "Invalid cycle 06 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:59.565Z",
+                    "endTime": "2026-11-02T08:16:00.506Z",
+                    "duration": 941,
+                    "screenshot": "screenshots/TC003_STEP114_Invalid_cycle_06_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP115",
+                    "stepName": "Invalid cycle 06 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:00.506Z",
+                    "endTime": "2026-11-02T08:16:00.605Z",
+                    "duration": 99,
+                    "screenshot": "screenshots/TC003_STEP115_Invalid_cycle_06_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP116",
+                    "stepName": "Invalid cycle 06 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:00.606Z",
+                    "endTime": "2026-11-02T08:16:00.731Z",
+                    "duration": 125,
+                    "screenshot": "screenshots/TC003_STEP116_Invalid_cycle_06_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP117",
+                    "stepName": "Invalid cycle 06 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:00.732Z",
+                    "endTime": "2026-11-02T08:16:04.612Z",
+                    "duration": 3880,
+                    "screenshot": "screenshots/TC003_STEP117_Invalid_cycle_06_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP118",
+                    "stepName": "Invalid cycle 06 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:04.612Z",
+                    "endTime": "2026-11-02T08:16:04.701Z",
+                    "duration": 89,
+                    "screenshot": "screenshots/TC003_STEP118_Invalid_cycle_06_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP119",
+                    "stepName": "Invalid cycle 07 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:04.701Z",
+                    "endTime": "2026-11-02T08:16:06.913Z",
+                    "duration": 2212,
+                    "screenshot": "screenshots/TC003_STEP119_Invalid_cycle_07_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP120",
+                    "stepName": "Invalid cycle 07 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:06.913Z",
+                    "endTime": "2026-11-02T08:16:08.881Z",
+                    "duration": 1968,
+                    "screenshot": "screenshots/TC003_STEP120_Invalid_cycle_07_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP121",
+                    "stepName": "Invalid cycle 07 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:08.881Z",
+                    "endTime": "2026-11-02T08:16:08.985Z",
+                    "duration": 104,
+                    "screenshot": "screenshots/TC003_STEP121_Invalid_cycle_07_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP122",
+                    "stepName": "Invalid cycle 07 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:08.985Z",
+                    "endTime": "2026-11-02T08:16:09.110Z",
+                    "duration": 125,
+                    "screenshot": "screenshots/TC003_STEP122_Invalid_cycle_07_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP123",
+                    "stepName": "Invalid cycle 07 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:09.110Z",
+                    "endTime": "2026-11-02T08:16:12.236Z",
+                    "duration": 3126,
+                    "screenshot": "screenshots/TC003_STEP123_Invalid_cycle_07_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP124",
+                    "stepName": "Invalid cycle 07 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:12.236Z",
+                    "endTime": "2026-11-02T08:16:12.361Z",
+                    "duration": 125,
+                    "screenshot": "screenshots/TC003_STEP124_Invalid_cycle_07_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP125",
+                    "stepName": "Invalid cycle 08 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:12.361Z",
+                    "endTime": "2026-11-02T08:16:13.888Z",
+                    "duration": 1527,
+                    "screenshot": "screenshots/TC003_STEP125_Invalid_cycle_08_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP126",
+                    "stepName": "Invalid cycle 08 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:13.889Z",
+                    "endTime": "2026-11-02T08:16:14.827Z",
+                    "duration": 938,
+                    "screenshot": "screenshots/TC003_STEP126_Invalid_cycle_08_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP127",
+                    "stepName": "Invalid cycle 08 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:14.827Z",
+                    "endTime": "2026-11-02T08:16:14.926Z",
+                    "duration": 99,
+                    "screenshot": "screenshots/TC003_STEP127_Invalid_cycle_08_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP128",
+                    "stepName": "Invalid cycle 08 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:14.927Z",
+                    "endTime": "2026-11-02T08:16:17.901Z",
+                    "duration": 2974,
+                    "screenshot": "screenshots/TC003_STEP128_Invalid_cycle_08_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP129",
+                    "stepName": "Invalid cycle 08 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:17.901Z",
+                    "endTime": "2026-11-02T08:16:19.349Z",
+                    "duration": 1448,
+                    "screenshot": "screenshots/TC003_STEP129_Invalid_cycle_08_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP130",
+                    "stepName": "Invalid cycle 08 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:19.349Z",
+                    "endTime": "2026-11-02T08:16:19.438Z",
+                    "duration": 89,
+                    "screenshot": "screenshots/TC003_STEP130_Invalid_cycle_08_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP131",
+                    "stepName": "Invalid cycle 09 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:19.438Z",
+                    "endTime": "2026-11-02T08:16:20.591Z",
+                    "duration": 1153,
+                    "screenshot": "screenshots/TC003_STEP131_Invalid_cycle_09_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP132",
+                    "stepName": "Invalid cycle 09 - Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:20.591Z",
+                    "endTime": "2026-11-02T08:16:21.541Z",
+                    "duration": 950,
+                    "screenshot": "screenshots/TC003_STEP132_Invalid_cycle_09_-_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP133",
+                    "stepName": "Invalid cycle 09 - Fill bad password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:21.541Z",
+                    "endTime": "2026-11-02T08:16:21.642Z",
+                    "duration": 101,
+                    "screenshot": "screenshots/TC003_STEP133_Invalid_cycle_09_-_Fill_bad_password.png"
+                },
+                {
+                    "stepId": "STEP134",
+                    "stepName": "Invalid cycle 09 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:21.642Z",
+                    "endTime": "2026-11-02T08:16:25.526Z",
+                    "duration": 3884,
+                    "screenshot": "screenshots/TC003_STEP134_Invalid_cycle_09_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP135",
+                    "stepName": "Invalid cycle 09 - Verify error text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:25.526Z",
+                    "endTime": "2026-11-02T08:16:26.450Z",
+                    "duration": 924,
+                    "screenshot": "screenshots/TC003_STEP135_Invalid_cycle_09_-_Verify_error_text.png"
+                },
+                {
+                    "stepId": "STEP136",
+                    "stepName": "Invalid cycle 09 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:26.451Z",
+                    "endTime": "2026-11-02T08:16:26.556Z",
+                    "duration": 105,
+                    "screenshot": "screenshots/TC003_STEP136_Invalid_cycle_09_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP137",
+                    "stepName": "Blank cycle 01 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:26.556Z",
+                    "endTime": "2026-11-02T08:16:27.581Z",
+                    "duration": 1025,
+                    "screenshot": "screenshots/TC003_STEP137_Blank_cycle_01_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP138",
+                    "stepName": "Blank cycle 01 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:27.582Z",
+                    "endTime": "2026-11-02T08:16:29.042Z",
+                    "duration": 1460,
+                    "screenshot": "screenshots/TC003_STEP138_Blank_cycle_01_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP139",
+                    "stepName": "Blank cycle 01 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:29.043Z",
+                    "endTime": "2026-11-02T08:16:29.221Z",
+                    "duration": 178,
+                    "screenshot": "screenshots/TC003_STEP139_Blank_cycle_01_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP140",
+                    "stepName": "Blank cycle 01 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:29.221Z",
+                    "endTime": "2026-11-02T08:16:29.323Z",
+                    "duration": 102,
+                    "screenshot": "screenshots/TC003_STEP140_Blank_cycle_01_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP141",
+                    "stepName": "Blank cycle 01 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:29.323Z",
+                    "endTime": "2026-11-02T08:16:29.422Z",
+                    "duration": 99,
+                    "screenshot": "screenshots/TC003_STEP141_Blank_cycle_01_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP142",
+                    "stepName": "Blank cycle 01 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:29.422Z",
+                    "endTime": "2026-11-02T08:16:29.520Z",
+                    "duration": 98,
+                    "screenshot": "screenshots/TC003_STEP142_Blank_cycle_01_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP143",
+                    "stepName": "Blank cycle 02 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:29.521Z",
+                    "endTime": "2026-11-02T08:16:30.237Z",
+                    "duration": 716,
+                    "screenshot": "screenshots/TC003_STEP143_Blank_cycle_02_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP144",
+                    "stepName": "Blank cycle 02 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:30.237Z",
+                    "endTime": "2026-11-02T08:16:30.647Z",
+                    "duration": 410,
+                    "screenshot": "screenshots/TC003_STEP144_Blank_cycle_02_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP145",
+                    "stepName": "Blank cycle 02 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:30.647Z",
+                    "endTime": "2026-11-02T08:16:30.818Z",
+                    "duration": 171,
+                    "screenshot": "screenshots/TC003_STEP145_Blank_cycle_02_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP146",
+                    "stepName": "Blank cycle 02 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:30.818Z",
+                    "endTime": "2026-11-02T08:16:30.938Z",
+                    "duration": 120,
+                    "screenshot": "screenshots/TC003_STEP146_Blank_cycle_02_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP147",
+                    "stepName": "Blank cycle 02 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:30.938Z",
+                    "endTime": "2026-11-02T08:16:31.038Z",
+                    "duration": 100,
+                    "screenshot": "screenshots/TC003_STEP147_Blank_cycle_02_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP148",
+                    "stepName": "Blank cycle 02 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:31.038Z",
+                    "endTime": "2026-11-02T08:16:31.130Z",
+                    "duration": 92,
+                    "screenshot": "screenshots/TC003_STEP148_Blank_cycle_02_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP149",
+                    "stepName": "Blank cycle 03 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:31.130Z",
+                    "endTime": "2026-11-02T08:16:32.534Z",
+                    "duration": 1404,
+                    "screenshot": "screenshots/TC003_STEP149_Blank_cycle_03_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP150",
+                    "stepName": "Blank cycle 03 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:32.534Z",
+                    "endTime": "2026-11-02T08:16:33.466Z",
+                    "duration": 932,
+                    "screenshot": "screenshots/TC003_STEP150_Blank_cycle_03_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP151",
+                    "stepName": "Blank cycle 03 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:33.466Z",
+                    "endTime": "2026-11-02T08:16:33.597Z",
+                    "duration": 131,
+                    "screenshot": "screenshots/TC003_STEP151_Blank_cycle_03_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP152",
+                    "stepName": "Blank cycle 03 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:33.597Z",
+                    "endTime": "2026-11-02T08:16:33.681Z",
+                    "duration": 84,
+                    "screenshot": "screenshots/TC003_STEP152_Blank_cycle_03_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP153",
+                    "stepName": "Blank cycle 03 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:33.681Z",
+                    "endTime": "2026-11-02T08:16:33.762Z",
+                    "duration": 81,
+                    "screenshot": "screenshots/TC003_STEP153_Blank_cycle_03_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP154",
+                    "stepName": "Blank cycle 03 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:33.763Z",
+                    "endTime": "2026-11-02T08:16:33.844Z",
+                    "duration": 81,
+                    "screenshot": "screenshots/TC003_STEP154_Blank_cycle_03_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP155",
+                    "stepName": "Blank cycle 04 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:33.844Z",
+                    "endTime": "2026-11-02T08:16:35.349Z",
+                    "duration": 1505,
+                    "screenshot": "screenshots/TC003_STEP155_Blank_cycle_04_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP156",
+                    "stepName": "Blank cycle 04 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:35.349Z",
+                    "endTime": "2026-11-02T08:16:35.756Z",
+                    "duration": 407,
+                    "screenshot": "screenshots/TC003_STEP156_Blank_cycle_04_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP157",
+                    "stepName": "Blank cycle 04 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:35.757Z",
+                    "endTime": "2026-11-02T08:16:35.888Z",
+                    "duration": 131,
+                    "screenshot": "screenshots/TC003_STEP157_Blank_cycle_04_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP158",
+                    "stepName": "Blank cycle 04 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:35.889Z",
+                    "endTime": "2026-11-02T08:16:35.973Z",
+                    "duration": 84,
+                    "screenshot": "screenshots/TC003_STEP158_Blank_cycle_04_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP159",
+                    "stepName": "Blank cycle 04 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:35.973Z",
+                    "endTime": "2026-11-02T08:16:36.056Z",
+                    "duration": 83,
+                    "screenshot": "screenshots/TC003_STEP159_Blank_cycle_04_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP160",
+                    "stepName": "Blank cycle 04 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:36.057Z",
+                    "endTime": "2026-11-02T08:16:36.148Z",
+                    "duration": 91,
+                    "screenshot": "screenshots/TC003_STEP160_Blank_cycle_04_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP161",
+                    "stepName": "Blank cycle 05 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:36.148Z",
+                    "endTime": "2026-11-02T08:16:37.165Z",
+                    "duration": 1017,
+                    "screenshot": "screenshots/TC003_STEP161_Blank_cycle_05_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP162",
+                    "stepName": "Blank cycle 05 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:37.165Z",
+                    "endTime": "2026-11-02T08:16:37.617Z",
+                    "duration": 452,
+                    "screenshot": "screenshots/TC003_STEP162_Blank_cycle_05_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP163",
+                    "stepName": "Blank cycle 05 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:37.617Z",
+                    "endTime": "2026-11-02T08:16:37.744Z",
+                    "duration": 127,
+                    "screenshot": "screenshots/TC003_STEP163_Blank_cycle_05_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP164",
+                    "stepName": "Blank cycle 05 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:37.744Z",
+                    "endTime": "2026-11-02T08:16:37.837Z",
+                    "duration": 93,
+                    "screenshot": "screenshots/TC003_STEP164_Blank_cycle_05_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP165",
+                    "stepName": "Blank cycle 05 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:37.837Z",
+                    "endTime": "2026-11-02T08:16:37.943Z",
+                    "duration": 106,
+                    "screenshot": "screenshots/TC003_STEP165_Blank_cycle_05_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP166",
+                    "stepName": "Blank cycle 05 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:37.943Z",
+                    "endTime": "2026-11-02T08:16:38.049Z",
+                    "duration": 106,
+                    "screenshot": "screenshots/TC003_STEP166_Blank_cycle_05_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP167",
+                    "stepName": "Blank cycle 06 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:38.050Z",
+                    "endTime": "2026-11-02T08:16:38.727Z",
+                    "duration": 677,
+                    "screenshot": "screenshots/TC003_STEP167_Blank_cycle_06_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP168",
+                    "stepName": "Blank cycle 06 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:38.727Z",
+                    "endTime": "2026-11-02T08:16:39.039Z",
+                    "duration": 312,
+                    "screenshot": "screenshots/TC003_STEP168_Blank_cycle_06_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP169",
+                    "stepName": "Blank cycle 06 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:39.039Z",
+                    "endTime": "2026-11-02T08:16:39.165Z",
+                    "duration": 126,
+                    "screenshot": "screenshots/TC003_STEP169_Blank_cycle_06_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP170",
+                    "stepName": "Blank cycle 06 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:39.166Z",
+                    "endTime": "2026-11-02T08:16:39.258Z",
+                    "duration": 92,
+                    "screenshot": "screenshots/TC003_STEP170_Blank_cycle_06_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP171",
+                    "stepName": "Blank cycle 06 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:39.258Z",
+                    "endTime": "2026-11-02T08:16:39.340Z",
+                    "duration": 82,
+                    "screenshot": "screenshots/TC003_STEP171_Blank_cycle_06_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP172",
+                    "stepName": "Blank cycle 06 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:39.341Z",
+                    "endTime": "2026-11-02T08:16:39.422Z",
+                    "duration": 81,
+                    "screenshot": "screenshots/TC003_STEP172_Blank_cycle_06_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP173",
+                    "stepName": "Blank cycle 07 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:39.423Z",
+                    "endTime": "2026-11-02T08:16:40.102Z",
+                    "duration": 679,
+                    "screenshot": "screenshots/TC003_STEP173_Blank_cycle_07_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP174",
+                    "stepName": "Blank cycle 07 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.102Z",
+                    "endTime": "2026-11-02T08:16:40.551Z",
+                    "duration": 449,
+                    "screenshot": "screenshots/TC003_STEP174_Blank_cycle_07_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP175",
+                    "stepName": "Blank cycle 07 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.551Z",
+                    "endTime": "2026-11-02T08:16:40.669Z",
+                    "duration": 118,
+                    "screenshot": "screenshots/TC003_STEP175_Blank_cycle_07_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP176",
+                    "stepName": "Blank cycle 07 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.670Z",
+                    "endTime": "2026-11-02T08:16:40.762Z",
+                    "duration": 92,
+                    "screenshot": "screenshots/TC003_STEP176_Blank_cycle_07_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP177",
+                    "stepName": "Blank cycle 07 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.762Z",
+                    "endTime": "2026-11-02T08:16:40.876Z",
+                    "duration": 114,
+                    "screenshot": "screenshots/TC003_STEP177_Blank_cycle_07_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP178",
+                    "stepName": "Blank cycle 07 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.877Z",
+                    "endTime": "2026-11-02T08:16:40.971Z",
+                    "duration": 94,
+                    "screenshot": "screenshots/TC003_STEP178_Blank_cycle_07_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP179",
+                    "stepName": "Blank cycle 08 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:40.972Z",
+                    "endTime": "2026-11-02T08:16:42.660Z",
+                    "duration": 1688,
+                    "screenshot": "screenshots/TC003_STEP179_Blank_cycle_08_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP180",
+                    "stepName": "Blank cycle 08 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:42.660Z",
+                    "endTime": "2026-11-02T08:16:43.582Z",
+                    "duration": 922,
+                    "screenshot": "screenshots/TC003_STEP180_Blank_cycle_08_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP181",
+                    "stepName": "Blank cycle 08 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:43.582Z",
+                    "endTime": "2026-11-02T08:16:43.703Z",
+                    "duration": 121,
+                    "screenshot": "screenshots/TC003_STEP181_Blank_cycle_08_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP182",
+                    "stepName": "Blank cycle 08 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:43.703Z",
+                    "endTime": "2026-11-02T08:16:43.799Z",
+                    "duration": 96,
+                    "screenshot": "screenshots/TC003_STEP182_Blank_cycle_08_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP183",
+                    "stepName": "Blank cycle 08 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:43.800Z",
+                    "endTime": "2026-11-02T08:16:43.883Z",
+                    "duration": 83,
+                    "screenshot": "screenshots/TC003_STEP183_Blank_cycle_08_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP184",
+                    "stepName": "Blank cycle 08 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:43.884Z",
+                    "endTime": "2026-11-02T08:16:43.970Z",
+                    "duration": 86,
+                    "screenshot": "screenshots/TC003_STEP184_Blank_cycle_08_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP185",
+                    "stepName": "Blank cycle 09 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:43.970Z",
+                    "endTime": "2026-11-02T08:16:44.793Z",
+                    "duration": 823,
+                    "screenshot": "screenshots/TC003_STEP185_Blank_cycle_09_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP186",
+                    "stepName": "Blank cycle 09 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:44.793Z",
+                    "endTime": "2026-11-02T08:16:45.714Z",
+                    "duration": 921,
+                    "screenshot": "screenshots/TC003_STEP186_Blank_cycle_09_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP187",
+                    "stepName": "Blank cycle 09 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:45.714Z",
+                    "endTime": "2026-11-02T08:16:45.855Z",
+                    "duration": 141,
+                    "screenshot": "screenshots/TC003_STEP187_Blank_cycle_09_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP188",
+                    "stepName": "Blank cycle 09 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:45.856Z",
+                    "endTime": "2026-11-02T08:16:45.990Z",
+                    "duration": 134,
+                    "screenshot": "screenshots/TC003_STEP188_Blank_cycle_09_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP189",
+                    "stepName": "Blank cycle 09 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:45.990Z",
+                    "endTime": "2026-11-02T08:16:46.083Z",
+                    "duration": 93,
+                    "screenshot": "screenshots/TC003_STEP189_Blank_cycle_09_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP190",
+                    "stepName": "Blank cycle 09 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:46.083Z",
+                    "endTime": "2026-11-02T08:16:46.166Z",
+                    "duration": 83,
+                    "screenshot": "screenshots/TC003_STEP190_Blank_cycle_09_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP191",
+                    "stepName": "Blank cycle 10 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:46.166Z",
+                    "endTime": "2026-11-02T08:16:46.892Z",
+                    "duration": 726,
+                    "screenshot": "screenshots/TC003_STEP191_Blank_cycle_10_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP192",
+                    "stepName": "Blank cycle 10 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:46.892Z",
+                    "endTime": "2026-11-02T08:16:47.213Z",
+                    "duration": 321,
+                    "screenshot": "screenshots/TC003_STEP192_Blank_cycle_10_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP193",
+                    "stepName": "Blank cycle 10 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:47.214Z",
+                    "endTime": "2026-11-02T08:16:47.358Z",
+                    "duration": 144,
+                    "screenshot": "screenshots/TC003_STEP193_Blank_cycle_10_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP194",
+                    "stepName": "Blank cycle 10 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:47.358Z",
+                    "endTime": "2026-11-02T08:16:47.448Z",
+                    "duration": 90,
+                    "screenshot": "screenshots/TC003_STEP194_Blank_cycle_10_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP195",
+                    "stepName": "Blank cycle 10 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:47.449Z",
+                    "endTime": "2026-11-02T08:16:47.536Z",
+                    "duration": 87,
+                    "screenshot": "screenshots/TC003_STEP195_Blank_cycle_10_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP196",
+                    "stepName": "Blank cycle 10 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:47.536Z",
+                    "endTime": "2026-11-02T08:16:47.633Z",
+                    "duration": 97,
+                    "screenshot": "screenshots/TC003_STEP196_Blank_cycle_10_-_Verify_login_URL.png"
+                },
+                {
+                    "stepId": "STEP197",
+                    "stepName": "Blank cycle 11 - Open login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:47.633Z",
+                    "endTime": "2026-11-02T08:16:48.286Z",
+                    "duration": 653,
+                    "screenshot": "screenshots/TC003_STEP197_Blank_cycle_11_-_Open_login_page.png"
+                },
+                {
+                    "stepId": "STEP198",
+                    "stepName": "Blank cycle 11 - Fill password only",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:48.286Z",
+                    "endTime": "2026-11-02T08:16:49.211Z",
+                    "duration": 925,
+                    "screenshot": "screenshots/TC003_STEP198_Blank_cycle_11_-_Fill_password_only.png"
+                },
+                {
+                    "stepId": "STEP199",
+                    "stepName": "Blank cycle 11 - Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:49.212Z",
+                    "endTime": "2026-11-02T08:16:49.359Z",
+                    "duration": 147,
+                    "screenshot": "screenshots/TC003_STEP199_Blank_cycle_11_-_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP200",
+                    "stepName": "Blank cycle 11 - Verify Required text",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:49.359Z",
+                    "endTime": "2026-11-02T08:16:49.452Z",
+                    "duration": 93,
+                    "screenshot": "screenshots/TC003_STEP200_Blank_cycle_11_-_Verify_Required_text.png"
+                },
+                {
+                    "stepId": "STEP201",
+                    "stepName": "Blank cycle 11 - Verify username remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:49.452Z",
+                    "endTime": "2026-11-02T08:16:49.557Z",
+                    "duration": 105,
+                    "screenshot": "screenshots/TC003_STEP201_Blank_cycle_11_-_Verify_username_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP202",
+                    "stepName": "Blank cycle 11 - Verify login URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:16:49.557Z",
+                    "endTime": "2026-11-02T08:16:49.653Z",
+                    "duration": 96,
+                    "screenshot": "screenshots/TC003_STEP202_Blank_cycle_11_-_Verify_login_URL.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC004",
+            "testCaseName": "Blank Username Validation",
+            "description": "Blank Username Validation",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Failed",
+            "startTime": "2026-11-02T08:13:58.882Z",
+            "endTime": "2026-11-02T08:14:30.800Z",
+            "duration": 31918,
+            "totalSteps": 10,
+            "passedSteps": 6,
+            "failedSteps": 1,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:13:58.882Z",
+                    "endTime": "2026-11-02T08:14:04.854Z",
+                    "duration": 5972,
+                    "screenshot": "screenshots/TC004_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Enter administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:04.855Z",
+                    "endTime": "2026-11-02T08:14:06.160Z",
+                    "duration": 1305,
+                    "screenshot": "screenshots/TC004_STEP002_Enter_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Enter administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.160Z",
+                    "endTime": "2026-11-02T08:14:06.411Z",
+                    "duration": 251,
+                    "screenshot": "screenshots/TC004_STEP003_Enter_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:06.411Z",
+                    "endTime": "2026-11-02T08:14:08.322Z",
+                    "duration": 1911,
+                    "screenshot": "screenshots/TC004_STEP004_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:08.323Z",
+                    "endTime": "2026-11-02T08:14:12.639Z",
+                    "duration": 4316,
+                    "screenshot": "screenshots/TC004_STEP005_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:12.639Z",
+                    "endTime": "2026-11-02T08:14:15.490Z",
+                    "duration": 2851,
+                    "screenshot": "screenshots/TC004_STEP006_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Enter administrator username",
+                    "action": "fill",
+                    "status": "Failed",
+                    "startTime": "2026-11-02T08:14:15.491Z",
+                    "endTime": "2026-11-02T08:14:30.504Z",
+                    "duration": 15013,
+                    "screenshot": "screenshots/TC004_STEP007_Enter_administrator_username_FAILED.png",
+                    "error": "locator.fill: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//input[@name=\"username\"]')\u001b[22m\n"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC005",
+            "testCaseName": "User Delete Operation testing",
+            "description": "User Delete Operation testing",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Failed",
+            "startTime": "2026-11-02T08:14:14.987Z",
+            "endTime": "2026-11-02T08:15:04.562Z",
+            "duration": 49575,
+            "totalSteps": 291,
+            "passedSteps": 17,
+            "failedSteps": 1,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Log in to Orange HRM › [TC001] Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:14.987Z",
+                    "endTime": "2026-11-02T08:14:21.151Z",
+                    "duration": 6164,
+                    "screenshot": "screenshots/TC005_STEP001_Log_in_to_Orange_HRM_TC001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:21.151Z",
+                    "endTime": "2026-11-02T08:14:22.898Z",
+                    "duration": 1747,
+                    "screenshot": "screenshots/TC005_STEP002_Log_in_to_Orange_HRM_TC001_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:22.898Z",
+                    "endTime": "2026-11-02T08:14:23.146Z",
+                    "duration": 248,
+                    "screenshot": "screenshots/TC005_STEP003_Log_in_to_Orange_HRM_TC001_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:23.146Z",
+                    "endTime": "2026-11-02T08:14:23.499Z",
+                    "duration": 353,
+                    "screenshot": "screenshots/TC005_STEP004_Log_in_to_Orange_HRM_TC001_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Log in to Orange HRM › [TC001] Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:23.500Z",
+                    "endTime": "2026-11-02T08:14:23.697Z",
+                    "duration": 197,
+                    "screenshot": "screenshots/TC005_STEP005_Log_in_to_Orange_HRM_TC001_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Log in to Orange HRM › [TC001] Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:23.699Z",
+                    "endTime": "2026-11-02T08:14:25.746Z",
+                    "duration": 2047,
+                    "screenshot": "screenshots/TC005_STEP006_Log_in_to_Orange_HRM_TC001_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Log in to Orange HRM › [TC001] Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.746Z",
+                    "endTime": "2026-11-02T08:14:27.611Z",
+                    "duration": 1865,
+                    "screenshot": "screenshots/TC005_STEP007_Log_in_to_Orange_HRM_TC001_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify 'Time at Work' is visible",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:27.611Z",
+                    "endTime": "2026-11-02T08:14:27.866Z",
+                    "duration": 255,
+                    "screenshot": "screenshots/TC005_STEP008_Verify_Time_at_Work_is_visible.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Verify application URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:27.866Z",
+                    "endTime": "2026-11-02T08:14:28.173Z",
+                    "duration": 307,
+                    "screenshot": "screenshots/TC005_STEP009_Verify_application_URL.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "click on PIM",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:28.174Z",
+                    "endTime": "2026-11-02T08:14:29.770Z",
+                    "duration": 1596,
+                    "screenshot": "screenshots/TC005_STEP010_click_on_PIM.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Click on delete button for the first emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:29.771Z",
+                    "endTime": "2026-11-02T08:14:32.907Z",
+                    "duration": 3136,
+                    "screenshot": "screenshots/TC005_STEP011_Click_on_delete_button_for_the_first_emp.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:32.907Z",
+                    "endTime": "2026-11-02T08:14:33.619Z",
+                    "duration": 712,
+                    "screenshot": "screenshots/TC005_STEP012_Click_on_yes_delete_button.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Click on delete button for the second emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.619Z",
+                    "endTime": "2026-11-02T08:14:39.065Z",
+                    "duration": 5446,
+                    "screenshot": "screenshots/TC005_STEP013_Click_on_delete_button_for_the_second_emp.png"
+                },
+                {
+                    "stepId": "STEP014",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:39.065Z",
+                    "endTime": "2026-11-02T08:14:39.399Z",
+                    "duration": 334,
+                    "screenshot": "screenshots/TC005_STEP014_Click_on_yes_delete_button.png"
+                },
+                {
+                    "stepId": "STEP015",
+                    "stepName": "Click on delete button for the third emp",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:39.400Z",
+                    "endTime": "2026-11-02T08:14:45.668Z",
+                    "duration": 6268,
+                    "screenshot": "screenshots/TC005_STEP015_Click_on_delete_button_for_the_third_emp.png"
+                },
+                {
+                    "stepId": "STEP016",
+                    "stepName": "Click on yes delete button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.668Z",
+                    "endTime": "2026-11-02T08:14:46.161Z",
+                    "duration": 493,
+                    "screenshot": "screenshots/TC005_STEP016_Click_on_yes_delete_button.png"
+                },
+                {
+                    "stepId": "STEP017",
+                    "stepName": "Run Testcase 6 again › [TC006] Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:46.161Z",
+                    "endTime": "2026-11-02T08:14:48.950Z",
+                    "duration": 2789,
+                    "screenshot": "screenshots/TC005_STEP017_Run_Testcase_6_again_TC006_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP018",
+                    "stepName": "Run Testcase 6 again › [TC006] Verify username field",
+                    "action": "verifyVisible",
+                    "status": "Failed",
+                    "startTime": "2026-11-02T08:14:48.950Z",
+                    "endTime": "2026-11-02T08:15:03.971Z",
+                    "duration": 15021,
+                    "screenshot": "screenshots/TC005_STEP018_Run_Testcase_6_again____TC006__Verify_username_field_FAILED.png",
+                    "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//input[@name=\"username\"]')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//input[@name=\"username\"]') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//input[@name=\"username\"]')\u001b[22m\n"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC006",
+            "testCaseName": "OrangeHRM Authentication and Form Validation",
+            "description": "OrangeHRM Authentication and Form Validation",
+            "module": "Feature",
+            "priority": "Medium",
+            "status": "Failed",
+            "startTime": "2026-11-02T08:14:17.833Z",
+            "endTime": "2026-11-02T08:15:24.792Z",
+            "duration": 66959,
+            "totalSteps": 275,
+            "passedSteps": 56,
+            "failedSteps": 1,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:17.833Z",
+                    "endTime": "2026-11-02T08:14:23.155Z",
+                    "duration": 5322,
+                    "screenshot": "screenshots/TC006_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:23.155Z",
+                    "endTime": "2026-11-02T08:14:24.911Z",
+                    "duration": 1756,
+                    "screenshot": "screenshots/TC006_STEP002_Verify_username_field.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:24.911Z",
+                    "endTime": "2026-11-02T08:14:25.061Z",
+                    "duration": 150,
+                    "screenshot": "screenshots/TC006_STEP003_Verify_password_field.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.061Z",
+                    "endTime": "2026-11-02T08:14:25.305Z",
+                    "duration": 244,
+                    "screenshot": "screenshots/TC006_STEP004_Fill_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.305Z",
+                    "endTime": "2026-11-02T08:14:25.642Z",
+                    "duration": 337,
+                    "screenshot": "screenshots/TC006_STEP005_Fill_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:25.642Z",
+                    "endTime": "2026-11-02T08:14:28.650Z",
+                    "duration": 3008,
+                    "screenshot": "screenshots/TC006_STEP006_Click_Login.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify Dashboard",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:28.650Z",
+                    "endTime": "2026-11-02T08:14:30.068Z",
+                    "duration": 1418,
+                    "screenshot": "screenshots/TC006_STEP007_Verify_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify Dashboard URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:30.068Z",
+                    "endTime": "2026-11-02T08:14:30.350Z",
+                    "duration": 282,
+                    "screenshot": "screenshots/TC006_STEP008_Verify_Dashboard_URL.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Round 1 - Click Admin menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:30.350Z",
+                    "endTime": "2026-11-02T08:14:31.988Z",
+                    "duration": 1638,
+                    "screenshot": "screenshots/TC006_STEP009_Round_1_-_Click_Admin_menu.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Round 1 - Verify Admin URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:31.988Z",
+                    "endTime": "2026-11-02T08:14:32.880Z",
+                    "duration": 892,
+                    "screenshot": "screenshots/TC006_STEP010_Round_1_-_Verify_Admin_URL.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Round 1 - Verify Admin heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:32.880Z",
+                    "endTime": "2026-11-02T08:14:33.388Z",
+                    "duration": 508,
+                    "screenshot": "screenshots/TC006_STEP011_Round_1_-_Verify_Admin_heading.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Round 1 - Scroll down on Admin",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:33.388Z",
+                    "endTime": "2026-11-02T08:14:34.137Z",
+                    "duration": 749,
+                    "screenshot": "screenshots/TC006_STEP012_Round_1_-_Scroll_down_on_Admin.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Round 1 - Scroll up on Admin",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:34.137Z",
+                    "endTime": "2026-11-02T08:14:34.404Z",
+                    "duration": 267,
+                    "screenshot": "screenshots/TC006_STEP013_Round_1_-_Scroll_up_on_Admin.png"
+                },
+                {
+                    "stepId": "STEP014",
+                    "stepName": "Round 1 - Click PIM menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:34.404Z",
+                    "endTime": "2026-11-02T08:14:35.820Z",
+                    "duration": 1416,
+                    "screenshot": "screenshots/TC006_STEP014_Round_1_-_Click_PIM_menu.png"
+                },
+                {
+                    "stepId": "STEP015",
+                    "stepName": "Round 1 - Verify PIM URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:35.821Z",
+                    "endTime": "2026-11-02T08:14:35.928Z",
+                    "duration": 107,
+                    "screenshot": "screenshots/TC006_STEP015_Round_1_-_Verify_PIM_URL.png"
+                },
+                {
+                    "stepId": "STEP016",
+                    "stepName": "Round 1 - Verify PIM heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:35.929Z",
+                    "endTime": "2026-11-02T08:14:36.490Z",
+                    "duration": 561,
+                    "screenshot": "screenshots/TC006_STEP016_Round_1_-_Verify_PIM_heading.png"
+                },
+                {
+                    "stepId": "STEP017",
+                    "stepName": "Round 1 - Scroll down on PIM",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:36.490Z",
+                    "endTime": "2026-11-02T08:14:36.733Z",
+                    "duration": 243,
+                    "screenshot": "screenshots/TC006_STEP017_Round_1_-_Scroll_down_on_PIM.png"
+                },
+                {
+                    "stepId": "STEP018",
+                    "stepName": "Round 1 - Scroll up on PIM",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:36.734Z",
+                    "endTime": "2026-11-02T08:14:37.067Z",
+                    "duration": 333,
+                    "screenshot": "screenshots/TC006_STEP018_Round_1_-_Scroll_up_on_PIM.png"
+                },
+                {
+                    "stepId": "STEP019",
+                    "stepName": "Round 1 - Click Leave menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:37.067Z",
+                    "endTime": "2026-11-02T08:14:39.714Z",
+                    "duration": 2647,
+                    "screenshot": "screenshots/TC006_STEP019_Round_1_-_Click_Leave_menu.png"
+                },
+                {
+                    "stepId": "STEP020",
+                    "stepName": "Round 1 - Verify Leave URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:39.714Z",
+                    "endTime": "2026-11-02T08:14:39.846Z",
+                    "duration": 132,
+                    "screenshot": "screenshots/TC006_STEP020_Round_1_-_Verify_Leave_URL.png"
+                },
+                {
+                    "stepId": "STEP021",
+                    "stepName": "Round 1 - Verify Leave heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:39.847Z",
+                    "endTime": "2026-11-02T08:14:40.789Z",
+                    "duration": 942,
+                    "screenshot": "screenshots/TC006_STEP021_Round_1_-_Verify_Leave_heading.png"
+                },
+                {
+                    "stepId": "STEP022",
+                    "stepName": "Round 1 - Scroll down on Leave",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.789Z",
+                    "endTime": "2026-11-02T08:14:40.991Z",
+                    "duration": 202,
+                    "screenshot": "screenshots/TC006_STEP022_Round_1_-_Scroll_down_on_Leave.png"
+                },
+                {
+                    "stepId": "STEP023",
+                    "stepName": "Round 1 - Scroll up on Leave",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.991Z",
+                    "endTime": "2026-11-02T08:14:41.198Z",
+                    "duration": 207,
+                    "screenshot": "screenshots/TC006_STEP023_Round_1_-_Scroll_up_on_Leave.png"
+                },
+                {
+                    "stepId": "STEP024",
+                    "stepName": "Round 1 - Click Time menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:41.198Z",
+                    "endTime": "2026-11-02T08:14:44.610Z",
+                    "duration": 3412,
+                    "screenshot": "screenshots/TC006_STEP024_Round_1_-_Click_Time_menu.png"
+                },
+                {
+                    "stepId": "STEP025",
+                    "stepName": "Round 1 - Verify Time URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.610Z",
+                    "endTime": "2026-11-02T08:14:44.770Z",
+                    "duration": 160,
+                    "screenshot": "screenshots/TC006_STEP025_Round_1_-_Verify_Time_URL.png"
+                },
+                {
+                    "stepId": "STEP026",
+                    "stepName": "Round 1 - Verify Time heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.770Z",
+                    "endTime": "2026-11-02T08:14:45.859Z",
+                    "duration": 1089,
+                    "screenshot": "screenshots/TC006_STEP026_Round_1_-_Verify_Time_heading.png"
+                },
+                {
+                    "stepId": "STEP027",
+                    "stepName": "Round 1 - Scroll down on Time",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.859Z",
+                    "endTime": "2026-11-02T08:14:46.157Z",
+                    "duration": 298,
+                    "screenshot": "screenshots/TC006_STEP027_Round_1_-_Scroll_down_on_Time.png"
+                },
+                {
+                    "stepId": "STEP028",
+                    "stepName": "Round 1 - Scroll up on Time",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:46.157Z",
+                    "endTime": "2026-11-02T08:14:46.357Z",
+                    "duration": 200,
+                    "screenshot": "screenshots/TC006_STEP028_Round_1_-_Scroll_up_on_Time.png"
+                },
+                {
+                    "stepId": "STEP029",
+                    "stepName": "Round 1 - Click Recruitment menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:46.357Z",
+                    "endTime": "2026-11-02T08:14:49.008Z",
+                    "duration": 2651,
+                    "screenshot": "screenshots/TC006_STEP029_Round_1_-_Click_Recruitment_menu.png"
+                },
+                {
+                    "stepId": "STEP030",
+                    "stepName": "Round 1 - Verify Recruitment URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:49.008Z",
+                    "endTime": "2026-11-02T08:14:49.148Z",
+                    "duration": 140,
+                    "screenshot": "screenshots/TC006_STEP030_Round_1_-_Verify_Recruitment_URL.png"
+                },
+                {
+                    "stepId": "STEP031",
+                    "stepName": "Round 1 - Verify Recruitment heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:49.149Z",
+                    "endTime": "2026-11-02T08:14:50.557Z",
+                    "duration": 1408,
+                    "screenshot": "screenshots/TC006_STEP031_Round_1_-_Verify_Recruitment_heading.png"
+                },
+                {
+                    "stepId": "STEP032",
+                    "stepName": "Round 1 - Scroll down on Recruitment",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:50.557Z",
+                    "endTime": "2026-11-02T08:14:50.919Z",
+                    "duration": 362,
+                    "screenshot": "screenshots/TC006_STEP032_Round_1_-_Scroll_down_on_Recruitment.png"
+                },
+                {
+                    "stepId": "STEP033",
+                    "stepName": "Round 1 - Scroll up on Recruitment",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:50.919Z",
+                    "endTime": "2026-11-02T08:14:51.231Z",
+                    "duration": 312,
+                    "screenshot": "screenshots/TC006_STEP033_Round_1_-_Scroll_up_on_Recruitment.png"
+                },
+                {
+                    "stepId": "STEP034",
+                    "stepName": "Round 1 - Click My Info menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:51.231Z",
+                    "endTime": "2026-11-02T08:14:53.290Z",
+                    "duration": 2059,
+                    "screenshot": "screenshots/TC006_STEP034_Round_1_-_Click_My_Info_menu.png"
+                },
+                {
+                    "stepId": "STEP035",
+                    "stepName": "Round 1 - Verify My Info URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:53.290Z",
+                    "endTime": "2026-11-02T08:14:53.571Z",
+                    "duration": 281,
+                    "screenshot": "screenshots/TC006_STEP035_Round_1_-_Verify_My_Info_URL.png"
+                },
+                {
+                    "stepId": "STEP036",
+                    "stepName": "Round 1 - Verify Personal Details heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:53.571Z",
+                    "endTime": "2026-11-02T08:14:54.232Z",
+                    "duration": 661,
+                    "screenshot": "screenshots/TC006_STEP036_Round_1_-_Verify_Personal_Details_heading.png"
+                },
+                {
+                    "stepId": "STEP037",
+                    "stepName": "Round 1 - Scroll down on My Info",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:54.232Z",
+                    "endTime": "2026-11-02T08:14:54.760Z",
+                    "duration": 528,
+                    "screenshot": "screenshots/TC006_STEP037_Round_1_-_Scroll_down_on_My_Info.png"
+                },
+                {
+                    "stepId": "STEP038",
+                    "stepName": "Round 1 - Scroll up on My Info",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:54.760Z",
+                    "endTime": "2026-11-02T08:14:55.155Z",
+                    "duration": 395,
+                    "screenshot": "screenshots/TC006_STEP038_Round_1_-_Scroll_up_on_My_Info.png"
+                },
+                {
+                    "stepId": "STEP039",
+                    "stepName": "Round 1 - Click Performance menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:55.155Z",
+                    "endTime": "2026-11-02T08:14:56.199Z",
+                    "duration": 1044,
+                    "screenshot": "screenshots/TC006_STEP039_Round_1_-_Click_Performance_menu.png"
+                },
+                {
+                    "stepId": "STEP040",
+                    "stepName": "Round 1 - Verify Performance URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:56.199Z",
+                    "endTime": "2026-11-02T08:14:56.338Z",
+                    "duration": 139,
+                    "screenshot": "screenshots/TC006_STEP040_Round_1_-_Verify_Performance_URL.png"
+                },
+                {
+                    "stepId": "STEP041",
+                    "stepName": "Round 1 - Verify Performance heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:56.338Z",
+                    "endTime": "2026-11-02T08:14:56.841Z",
+                    "duration": 503,
+                    "screenshot": "screenshots/TC006_STEP041_Round_1_-_Verify_Performance_heading.png"
+                },
+                {
+                    "stepId": "STEP042",
+                    "stepName": "Round 1 - Scroll down on Performance",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:56.841Z",
+                    "endTime": "2026-11-02T08:14:57.093Z",
+                    "duration": 252,
+                    "screenshot": "screenshots/TC006_STEP042_Round_1_-_Scroll_down_on_Performance.png"
+                },
+                {
+                    "stepId": "STEP043",
+                    "stepName": "Round 1 - Scroll up on Performance",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:57.093Z",
+                    "endTime": "2026-11-02T08:14:57.456Z",
+                    "duration": 363,
+                    "screenshot": "screenshots/TC006_STEP043_Round_1_-_Scroll_up_on_Performance.png"
+                },
+                {
+                    "stepId": "STEP044",
+                    "stepName": "Round 1 - Click Dashboard menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:57.456Z",
+                    "endTime": "2026-11-02T08:14:58.448Z",
+                    "duration": 992,
+                    "screenshot": "screenshots/TC006_STEP044_Round_1_-_Click_Dashboard_menu.png"
+                },
+                {
+                    "stepId": "STEP045",
+                    "stepName": "Round 1 - Verify Dashboard URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:58.449Z",
+                    "endTime": "2026-11-02T08:14:58.670Z",
+                    "duration": 221,
+                    "screenshot": "screenshots/TC006_STEP045_Round_1_-_Verify_Dashboard_URL.png"
+                },
+                {
+                    "stepId": "STEP046",
+                    "stepName": "Round 1 - Verify Dashboard heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:58.670Z",
+                    "endTime": "2026-11-02T08:14:59.370Z",
+                    "duration": 700,
+                    "screenshot": "screenshots/TC006_STEP046_Round_1_-_Verify_Dashboard_heading.png"
+                },
+                {
+                    "stepId": "STEP047",
+                    "stepName": "Round 1 - Scroll down on Dashboard",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:59.370Z",
+                    "endTime": "2026-11-02T08:14:59.594Z",
+                    "duration": 224,
+                    "screenshot": "screenshots/TC006_STEP047_Round_1_-_Scroll_down_on_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP048",
+                    "stepName": "Round 1 - Scroll up on Dashboard",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:59.594Z",
+                    "endTime": "2026-11-02T08:14:59.829Z",
+                    "duration": 235,
+                    "screenshot": "screenshots/TC006_STEP048_Round_1_-_Scroll_up_on_Dashboard.png"
+                },
+                {
+                    "stepId": "STEP049",
+                    "stepName": "Round 1 - Click Directory menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:59.829Z",
+                    "endTime": "2026-11-02T08:15:01.822Z",
+                    "duration": 1993,
+                    "screenshot": "screenshots/TC006_STEP049_Round_1_-_Click_Directory_menu.png"
+                },
+                {
+                    "stepId": "STEP050",
+                    "stepName": "Round 1 - Verify Directory URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:01.823Z",
+                    "endTime": "2026-11-02T08:15:01.936Z",
+                    "duration": 113,
+                    "screenshot": "screenshots/TC006_STEP050_Round_1_-_Verify_Directory_URL.png"
+                },
+                {
+                    "stepId": "STEP051",
+                    "stepName": "Round 1 - Verify Directory heading",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:01.936Z",
+                    "endTime": "2026-11-02T08:15:03.580Z",
+                    "duration": 1644,
+                    "screenshot": "screenshots/TC006_STEP051_Round_1_-_Verify_Directory_heading.png"
+                },
+                {
+                    "stepId": "STEP052",
+                    "stepName": "Round 1 - Scroll down on Directory",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:03.580Z",
+                    "endTime": "2026-11-02T08:15:03.821Z",
+                    "duration": 241,
+                    "screenshot": "screenshots/TC006_STEP052_Round_1_-_Scroll_down_on_Directory.png"
+                },
+                {
+                    "stepId": "STEP053",
+                    "stepName": "Round 1 - Scroll up on Directory",
+                    "action": "scroll",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:03.822Z",
+                    "endTime": "2026-11-02T08:15:04.113Z",
+                    "duration": 291,
+                    "screenshot": "screenshots/TC006_STEP053_Round_1_-_Scroll_up_on_Directory.png"
+                },
+                {
+                    "stepId": "STEP054",
+                    "stepName": "Round 1 - Click Maintenance menu",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:04.113Z",
+                    "endTime": "2026-11-02T08:15:06.463Z",
+                    "duration": 2350,
+                    "screenshot": "screenshots/TC006_STEP054_Round_1_-_Click_Maintenance_menu.png"
+                },
+                {
+                    "stepId": "STEP055",
+                    "stepName": "Round 1 - Verify Maintenance URL",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:06.463Z",
+                    "endTime": "2026-11-02T08:15:06.618Z",
+                    "duration": 155,
+                    "screenshot": "screenshots/TC006_STEP055_Round_1_-_Verify_Maintenance_URL.png"
+                },
+                {
+                    "stepId": "STEP056",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:06.618Z",
+                    "endTime": "2026-11-02T08:15:09.602Z",
+                    "duration": 2984,
+                    "screenshot": "screenshots/TC006_STEP056_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP057",
+                    "stepName": "Verify username field",
+                    "action": "verifyVisible",
+                    "status": "Failed",
+                    "startTime": "2026-11-02T08:15:09.602Z",
+                    "endTime": "2026-11-02T08:15:24.617Z",
+                    "duration": 15015,
+                    "screenshot": "screenshots/TC006_STEP057_Verify_username_field_FAILED.png",
+                    "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//input[@name=\"username\"]')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//input[@name=\"username\"]') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//input[@name=\"username\"]')\u001b[22m\n"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC007",
+            "testCaseName": "Invalid OrangeHRM Password",
+            "description": "Invalid OrangeHRM Password",
+            "module": "Authentication",
+            "priority": "High",
+            "status": "Passed",
+            "startTime": "2026-11-02T08:14:31.970Z",
+            "endTime": "2026-11-02T08:14:49.836Z",
+            "duration": 17866,
+            "totalSteps": 12,
+            "passedSteps": 12,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:31.970Z",
+                    "endTime": "2026-11-02T08:14:37.060Z",
+                    "duration": 5090,
+                    "screenshot": "screenshots/TC007_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:37.060Z",
+                    "endTime": "2026-11-02T08:14:39.987Z",
+                    "duration": 2927,
+                    "screenshot": "screenshots/TC007_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:39.987Z",
+                    "endTime": "2026-11-02T08:14:40.149Z",
+                    "duration": 162,
+                    "screenshot": "screenshots/TC007_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Fill administrator username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.149Z",
+                    "endTime": "2026-11-02T08:14:40.390Z",
+                    "duration": 241,
+                    "screenshot": "screenshots/TC007_STEP004_Fill_administrator_username.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill invalid password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.391Z",
+                    "endTime": "2026-11-02T08:14:40.567Z",
+                    "duration": 176,
+                    "screenshot": "screenshots/TC007_STEP005_Fill_invalid_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:40.567Z",
+                    "endTime": "2026-11-02T08:14:44.529Z",
+                    "duration": 3962,
+                    "screenshot": "screenshots/TC007_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify invalid credentials message",
+                    "action": "verifyText",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:44.529Z",
+                    "endTime": "2026-11-02T08:14:45.151Z",
+                    "duration": 622,
+                    "screenshot": "screenshots/TC007_STEP007_Verify_invalid_credentials_message.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Verify login URL remains displayed",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.152Z",
+                    "endTime": "2026-11-02T08:14:45.278Z",
+                    "duration": 126,
+                    "screenshot": "screenshots/TC007_STEP008_Verify_login_URL_remains_displayed.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Verify username field remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.278Z",
+                    "endTime": "2026-11-02T08:14:45.442Z",
+                    "duration": 164,
+                    "screenshot": "screenshots/TC007_STEP009_Verify_username_field_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Refill username",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.442Z",
+                    "endTime": "2026-11-02T08:14:45.852Z",
+                    "duration": 410,
+                    "screenshot": "screenshots/TC007_STEP010_Refill_username.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Fill second invalid password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:45.852Z",
+                    "endTime": "2026-11-02T08:14:46.147Z",
+                    "duration": 295,
+                    "screenshot": "screenshots/TC007_STEP011_Fill_second_invalid_password.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Click Login button again",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:46.147Z",
+                    "endTime": "2026-11-02T08:14:49.836Z",
+                    "duration": 3689,
+                    "screenshot": "screenshots/TC007_STEP012_Click_Login_button_again.png"
+                }
+            ]
+        },
+        {
+            "testCaseId": "TC008",
+            "testCaseName": "User Log out validation",
+            "description": "User Log out validation",
+            "module": "Authentication",
+            "priority": "Medium",
+            "status": "Passed",
+            "startTime": "2026-11-02T08:14:50.708Z",
+            "endTime": "2026-11-02T08:15:11.872Z",
+            "duration": 21164,
+            "totalSteps": 13,
+            "passedSteps": 13,
+            "failedSteps": 0,
+            "steps": [
+                {
+                    "stepId": "STEP001",
+                    "stepName": "Open OrangeHRM login page",
+                    "action": "navigate",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:50.708Z",
+                    "endTime": "2026-11-02T08:14:55.641Z",
+                    "duration": 4933,
+                    "screenshot": "screenshots/TC008_STEP001_Open_OrangeHRM_login_page.png"
+                },
+                {
+                    "stepId": "STEP002",
+                    "stepName": "Verify username field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:55.641Z",
+                    "endTime": "2026-11-02T08:14:57.652Z",
+                    "duration": 2011,
+                    "screenshot": "screenshots/TC008_STEP002_Verify_username_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP003",
+                    "stepName": "Verify password field is visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:57.652Z",
+                    "endTime": "2026-11-02T08:14:57.813Z",
+                    "duration": 161,
+                    "screenshot": "screenshots/TC008_STEP003_Verify_password_field_is_visible.png"
+                },
+                {
+                    "stepId": "STEP004",
+                    "stepName": "Type username Admin",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:57.813Z",
+                    "endTime": "2026-11-02T08:14:58.258Z",
+                    "duration": 445,
+                    "screenshot": "screenshots/TC008_STEP004_Type_username_Admin.png"
+                },
+                {
+                    "stepId": "STEP005",
+                    "stepName": "Fill administrator password",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:58.258Z",
+                    "endTime": "2026-11-02T08:14:58.561Z",
+                    "duration": 303,
+                    "screenshot": "screenshots/TC008_STEP005_Fill_administrator_password.png"
+                },
+                {
+                    "stepId": "STEP006",
+                    "stepName": "Click Login button",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:14:58.562Z",
+                    "endTime": "2026-11-02T08:15:02.518Z",
+                    "duration": 3956,
+                    "screenshot": "screenshots/TC008_STEP006_Click_Login_button.png"
+                },
+                {
+                    "stepId": "STEP007",
+                    "stepName": "Verify login URL remains displayed",
+                    "action": "verifyUrl",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:02.518Z",
+                    "endTime": "2026-11-02T08:15:02.612Z",
+                    "duration": 94,
+                    "screenshot": "screenshots/TC008_STEP007_Verify_login_URL_remains_displayed.png"
+                },
+                {
+                    "stepId": "STEP008",
+                    "stepName": "Click on profile name",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:02.612Z",
+                    "endTime": "2026-11-02T08:15:04.936Z",
+                    "duration": 2324,
+                    "screenshot": "screenshots/TC008_STEP008_Click_on_profile_name.png"
+                },
+                {
+                    "stepId": "STEP009",
+                    "stepName": "Click on Log out",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:04.936Z",
+                    "endTime": "2026-11-02T08:15:07.435Z",
+                    "duration": 2499,
+                    "screenshot": "screenshots/TC008_STEP009_Click_on_Log_out.png"
+                },
+                {
+                    "stepId": "STEP010",
+                    "stepName": "Verify username field remains visible",
+                    "action": "verifyVisible",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:07.436Z",
+                    "endTime": "2026-11-02T08:15:08.595Z",
+                    "duration": 1159,
+                    "screenshot": "screenshots/TC008_STEP010_Verify_username_field_remains_visible.png"
+                },
+                {
+                    "stepId": "STEP011",
+                    "stepName": "Fill username for retry",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:08.596Z",
+                    "endTime": "2026-11-02T08:15:08.793Z",
+                    "duration": 197,
+                    "screenshot": "screenshots/TC008_STEP011_Fill_username_for_retry.png"
+                },
+                {
+                    "stepId": "STEP012",
+                    "stepName": "Fill administrator password again",
+                    "action": "fill",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:08.794Z",
+                    "endTime": "2026-11-02T08:15:08.950Z",
+                    "duration": 156,
+                    "screenshot": "screenshots/TC008_STEP012_Fill_administrator_password_again.png"
+                },
+                {
+                    "stepId": "STEP013",
+                    "stepName": "Click Login for successful retry",
+                    "action": "click",
+                    "status": "Passed",
+                    "startTime": "2026-11-02T08:15:08.950Z",
+                    "endTime": "2026-11-02T08:15:11.872Z",
+                    "duration": 2922,
+                    "screenshot": "screenshots/TC008_STEP013_Click_Login_for_successful_retry.png"
+                }
+            ]
+        }
+    ]
+}
