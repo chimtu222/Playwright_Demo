@@ -97,34 +97,10 @@ test(
                 0
             );
 
-        const excelLoadDuration =
-            excelLoadEnd - excelLoadStart;
-
         console.log('');
-        console.log('===================================');
-        console.log('Excel to Object Loading Summary');
-        console.log('===================================');
-        console.log(
-            `Testcases loaded : ${testCases.length}`
-        );
-        console.log(
-            `Steps loaded     : ${totalLoadedSteps}`
-        );
-        console.log(
-            `Loading time     : ${excelLoadDuration.toFixed(2)} ms`
-        );
-        console.log(
-            `Loading time     : ${(excelLoadDuration / 1000).toFixed(3)} sec`
-        );
-        console.log('===================================');
-        console.log('');
-        console.log(
-            `Found ${testCases.length} enabled test case(s).`
-        );
+        console.log(`Found ${testCases.length} enabled test case(s).`);
 
-        console.log(
-            `Running with maximum ${MAX_PARALLEL_TESTCASES} parallel testcase(s).`
-        );
+        console.log(`Running with maximum ${MAX_PARALLEL_TESTCASES} parallel testcase(s).`);
 
         const testCaseResults =
             await runWithConcurrency(

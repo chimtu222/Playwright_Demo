@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as ExcelJS from 'exceljs';
+import { performance } from 'node:perf_hooks';
 
 import {
     ActionType,
@@ -34,6 +35,13 @@ export class ExcelTestCaseLoader {
     static async loadEnabledTestCases():
         Promise<CodelessTestCase[]> {
 
+        /*
+         * Measures the complete loader execution,
+         * including Excel reading and object conversion.
+         */
+        const totalLoaderStart =
+            performance.now();
+
         if (
             !fs.existsSync(
                 this.workbookPath
@@ -47,9 +55,13 @@ export class ExcelTestCaseLoader {
         const workbook =
             new ExcelJS.Workbook();
 
-        // await workbook.xlsx.readFile(
-        //     this.workbookPath
-        // );
+        /*
+         * Measure only the time taken by ExcelJS
+         * to open, unzip, and parse the workbook.
+         */
+        const excelReadStart =
+            performance.now();
+
         await workbook.xlsx.readFile(
             this.workbookPath,
             {
@@ -69,6 +81,20 @@ export class ExcelTestCaseLoader {
                 ]
             }
         );
+
+        const excelReadEnd =
+            performance.now();
+
+        const excelReadTime =
+            excelReadEnd -
+            excelReadStart;
+
+        /*
+         * Object-conversion timing starts only after
+         * ExcelJS has finished reading the workbook.
+         */
+        const conversionStart =
+            performance.now();
 
         const controlSheet =
             workbook.getWorksheet(
@@ -209,12 +235,105 @@ export class ExcelTestCaseLoader {
             });
         }
 
-        return testCases.sort(
-            (first, second) =>
-                first.id.localeCompare(
-                    second.id
-                )
+        const conversionEnd =
+            performance.now();
+
+        const conversionTime =
+            conversionEnd -
+            conversionStart;
+
+        /*
+         * Keep sorting separate so that it does not
+         * incorrectly appear as Excel conversion time.
+         */
+        const sortingStart =
+            performance.now();
+
+        const sortedTestCases =
+            testCases.sort(
+                (first, second) =>
+                    first.id.localeCompare(
+                        second.id
+                    )
+            );
+
+        const sortingEnd =
+            performance.now();
+
+        const sortingTime =
+            sortingEnd -
+            sortingStart;
+
+        const totalLoaderEnd =
+            performance.now();
+
+        const totalLoaderTime =
+            totalLoaderEnd -
+            totalLoaderStart;
+
+        const totalSteps =
+            sortedTestCases.reduce(
+                (
+                    total,
+                    testCase
+                ) =>
+                    total +
+                    testCase.steps.length,
+                0
+            );
+
+        console.log('');
+        console.log(
+            '================ EXCEL LOADING PERFORMANCE ================'
         );
+
+        console.log(
+            `Workbook file size : ${this.formatFileSize(
+                fs.statSync(
+                    this.workbookPath
+                ).size
+            )}`
+        );
+
+        console.log(
+            `Workbook sheets    : ${workbook.worksheets.length}`
+        );
+
+        console.log(
+            `Testcases loaded   : ${sortedTestCases.length}`
+        );
+
+        console.log(
+            `Steps loaded       : ${totalSteps}`
+        );
+
+        console.log(
+            `Excel read time    : ${excelReadTime.toFixed(2)} ms`
+        );
+
+        console.log(
+            `Object conversion  : ${conversionTime.toFixed(2)} ms`
+        );
+
+        console.log(
+            `Sorting time       : ${sortingTime.toFixed(2)} ms`
+        );
+
+        console.log(
+            `Total loader time  : ${totalLoaderTime.toFixed(2)} ms`
+        );
+
+        console.log(
+            `Total loader time  : ${(totalLoaderTime / 1000).toFixed(3)} sec`
+        );
+
+        console.log(
+            '==========================================================='
+        );
+
+        console.log('');
+
+        return sortedTestCases;
     }
 
     private static readControlRows(
@@ -555,8 +674,8 @@ export class ExcelTestCaseLoader {
                 }
 
                 /*
-                 * Insert the referenced testcase steps
-                 * into the parent testcase sequence.
+                 * Insert referenced testcase steps into
+                 * the parent testcase sequence.
                  */
                 for (
                     const referencedStep
@@ -1043,5 +1162,34 @@ export class ExcelTestCaseLoader {
         return String(
             value
         ).trim();
+    }
+
+    private static formatFileSize(
+        sizeInBytes: number
+    ): string {
+
+        if (
+            sizeInBytes <
+            1024
+        ) {
+            return `${sizeInBytes} bytes`;
+        }
+
+        const sizeInKilobytes =
+            sizeInBytes /
+            1024;
+
+        if (
+            sizeInKilobytes <
+            1024
+        ) {
+            return `${sizeInKilobytes.toFixed(2)} KB`;
+        }
+
+        const sizeInMegabytes =
+            sizeInKilobytes /
+            1024;
+
+        return `${sizeInMegabytes.toFixed(2)} MB`;
     }
 }
